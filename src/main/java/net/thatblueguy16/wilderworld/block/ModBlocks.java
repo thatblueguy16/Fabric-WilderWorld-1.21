@@ -21,15 +21,13 @@ public class ModBlocks {
     public static final Block CYPRESS_WOOD = registerBlock("cypress_wood",
             new Block(AbstractPlantStemBlock.Settings.create()
                     .strength(2f)
-                    .sounds(BlockSoundGroup.WOOD)));
-    public static final Block CYPRESS_PLANKS = register(
-            "cypress_planks",
-            new Block(
-                    AbstractBlock.Settings.create()
-                            .instrument(NoteBlockInstrument.BASS)
-                            .strength(2.0F, 3.0F)
-                            .sounds(BlockSoundGroup.WOOD)
-                            .burnable()));
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+    public static final Block CYPRESS_PLANKS = registerBlock("cypress_planks",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
 
 
     private static Block registerBlock(String name, Block block) {

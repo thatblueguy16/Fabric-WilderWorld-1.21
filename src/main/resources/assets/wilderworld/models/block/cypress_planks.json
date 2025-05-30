@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "wilderworld:blcok/cypress_planks"
+    "all": "wilderworld:block/cypress_planks"
   }
 }
