@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "wilderworld",
+	"version": "${version}",
+	"name": "WilderWorld",
+	"description": "This is a mod that will add a variety of new biomes, mobs, blocks, and items to the game.",
+	"authors": [
+		"thatblueguy16"
+	],
+	"contact": {
+		"homepage": "https://thatblueguy16.net",
+		"sources": "https://github.com/thatblueguy16/Fabric-WilderWorld-1.21"
+	},
+	"license": "MIT",
+	"icon": "assets/wilderworld/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.thatblueguy16.wilderworld.WilderWorld"
+		],
+		"fabric-datagen": [
+			"net.thatblueguy16.wilderworld.WilderWorldDataGenerator"
+		],
+		"client": [
+			"net.thatblueguy16.wilderworld.WilderWorldClient"
+		]
+	},
+	"mixins": [
+		"wilderworld.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
