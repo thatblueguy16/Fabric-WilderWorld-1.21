@@ -18,6 +18,17 @@ repositories {
 	// for more information about repositories.
 }
 
+sourceSets {
+	main {
+		java {
+			srcDirs = ['src/main/java']
+		}
+		resources {
+			srcDirs = ['src/main/resources', 'src/generated/resources']
+		}
+	}
+}
+
 fabricApi {
 	configureDataGeneration {
 		client = true
@@ -80,5 +91,11 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
+		// Copy datagen output into main resources during build
+		tasks.processResources {
+			from("src/generated/resources") {
+				include "**/*"
+			}
+		}
 	}
 }
