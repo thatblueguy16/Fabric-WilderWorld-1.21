@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "wilderworld:block/cypress_wood"
+    "side": "wilderworld:block/cypress_wood",
+    "end": "wilderworld:block/cypress_log"
   }
 }

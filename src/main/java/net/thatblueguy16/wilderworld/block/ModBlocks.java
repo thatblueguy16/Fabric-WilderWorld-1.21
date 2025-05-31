@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -18,7 +19,7 @@ import static net.minecraft.block.Blocks.register;
 
 public class ModBlocks {
     public static final Block CYPRESS_WOOD = registerBlock("cypress_wood",
-            new Block(AbstractPlantStemBlock.Settings.create()
+            new PillarBlock(AbstractPlantStemBlock.Settings.create()
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable()));
@@ -47,6 +48,18 @@ public class ModBlocks {
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable()));
+    public static final Block CYPRESS_LEAVES = registerBlock("cypress_leaves",
+            new LeavesBlock(AbstractBlock.Settings.create()
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
 
 
     private static Block registerBlock(String name, Block block) {

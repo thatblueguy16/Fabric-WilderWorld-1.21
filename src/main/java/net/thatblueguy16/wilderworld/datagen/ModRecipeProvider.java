@@ -2,6 +2,7 @@ package net.thatblueguy16.wilderworld.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -37,5 +38,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.PLANT_FIBER)
                 .criterion("has_plant_fiber", conditionsFromItem(ModItems.PLANT_FIBER))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "string_from_plant_fiber"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_PLANKS, 4)
+                .input(ModBlocks.CYPRESS_LOG)
+                .criterion("has_cypress_log", conditionsFromItem(ModBlocks.CYPRESS_LOG))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_planks_from_cypress_log"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_PLANKS, 4)
+                .input(ModBlocks.CYPRESS_WOOD)
+                .criterion("has_cypress_wood", conditionsFromItem(ModBlocks.CYPRESS_WOOD))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_planks_from_cypress_wood"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.CRAFTING_TABLE, 1)
+                .pattern("   ")
+                .pattern("xx ")
+                .pattern("xx ")
+                .input('x', ModBlocks.CYPRESS_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "crafting_table_from_cypress_planks"));
+
     }
 }
