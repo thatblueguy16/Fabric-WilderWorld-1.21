@@ -1,10 +1,8 @@
 package net.thatblueguy16.wilderworld.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.AbstractPlantStemBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.MapColor;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,6 +11,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.thatblueguy16.wilderworld.WilderWorld;
 
 import static net.minecraft.block.Blocks.register;
@@ -29,13 +28,25 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable()));
     public static final Block SAPPHIRE_ORE = registerBlock("sapphire_ore",
-            new Block(AbstractBlock.Settings.create()
-                    .strength(4f)
+            new ExperienceDroppingBlock(UniformIntProvider.create(2,5), AbstractBlock.Settings.create()
+                    .requiresTool()
+                    .strength(3f)
                     .sounds(BlockSoundGroup.STONE)));
     public static final Block DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
-            new Block(AbstractBlock.Settings.create()
+            new ExperienceDroppingBlock(UniformIntProvider.create(3,6), AbstractBlock.Settings.create()
+                    .requiresTool()
                     .strength(4f)
                     .sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block SAPPHIRE_BLOCK = registerBlock("sapphire_block" ,
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .requiresTool()));
+    public static final Block CYPRESS_LOG = registerBlock("cypress_log",
+            new PillarBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
 
 
     private static Block registerBlock(String name, Block block) {

@@ -22,6 +22,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CYPRESS_WOOD);
                         entries.add(ModBlocks.SAPPHIRE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+                        entries.add(ModBlocks.SAPPHIRE_BLOCK);
+                        entries.add(ModItems.MISTCALL_LANTERN);
+                        entries.add(ModBlocks.CYPRESS_LOG);
                     }).build());
 
     public static final ItemGroup RUSTY_STEPPE_GROUP = Registry.register(Registries.ITEM_GROUP,

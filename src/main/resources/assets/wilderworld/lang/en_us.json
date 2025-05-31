@@ -1,11 +1,14 @@
 {
   "item.wilderworld.plant_fiber": "Plant Fiber",
   "item.wilderworld.sapphire": "Sapphire",
+  "item.wilderworld.mistcall_lantern": "Mistcall Lantern",
 
   "block.wilderworld.cypress_wood": "Cypress Wood",
   "block.wilderworld.cypress_planks": "Cypress Planks",
-  "blcok.wilderworld.sapphire_ore": "Sapphire Ore",
-  "blcok.wilderworld.deepslate_sapphire_ore": "Deeplsate Sapphire Ore",
+  "block.wilderworld.sapphire_ore": "Sapphire Ore",
+  "block.wilderworld.deepslate_sapphire_ore": "Deeplsate Sapphire Ore",
+  "block.wilderworld.sapphire_block": "Block of Sapphire",
+  "block.wilderworld.cypress_log": "Cypress Log",
 
   "itemgroup.wilderworld.misty_mire": "Misty Mire",
   "itemgroup.wilderworld.rusty_steppe": "Rusty Steppe"
