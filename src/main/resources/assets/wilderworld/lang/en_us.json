@@ -3,5 +3,10 @@
   "item.wilderworld.sapphire": "Sapphire",
 
   "block.wilderworld.cypress_wood": "Cypress Wood",
-  "block.wilderworld.cypress_planks": "Cypress Planks"
+  "block.wilderworld.cypress_planks": "Cypress Planks",
+  "blcok.wilderworld.sapphire_ore": "Sapphire Ore",
+  "blcok.wilderworld.deepslate_sapphire_ore": "Deeplsate Sapphire Ore",
+
+  "itemgroup.wilderworld.misty_mire": "Misty Mire",
+  "itemgroup.wilderworld.rusty_steppe": "Rusty Steppe"
 }

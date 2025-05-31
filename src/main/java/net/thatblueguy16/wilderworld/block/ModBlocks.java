@@ -28,6 +28,14 @@ public class ModBlocks {
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable()));
+    public static final Block SAPPHIRE_ORE = registerBlock("sapphire_ore",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .sounds(BlockSoundGroup.STONE)));
+    public static final Block DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .sounds(BlockSoundGroup.DEEPSLATE)));
 
 
     private static Block registerBlock(String name, Block block) {
