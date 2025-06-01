@@ -27,26 +27,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        List<ItemConvertible> SAPPHIRE_SMELTABLES = List.of(ModBlocks.SAPPHIRE_ORE,
-                ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+        List<ItemConvertible> SAPPHIRE_SMELTABLES = List.of(ModBlocks.SAPPHIRE_ORE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+        List<ItemConvertible> TORMENTIUM_SMELTABLES = List.of(ModBlocks.TORMENTIUM_ORE, ModBlocks.DEEPSLATE_TORMENTIUM_ORE, ModItems.RAW_TORMENTIUM);
+        List<ItemConvertible> PEAT_SMELTABLES = List.of(ModItems.PEAT_CLUMP);
 
         offerSmelting(exporter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE, .25f, 200, "sapphire");
         offerBlasting(exporter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE, .25f, 100, "sapphire");
 
+        offerSmelting(exporter, TORMENTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.TORMENTIUM_INGOT, .5f, 200, "tormentium");
+        offerBlasting(exporter, TORMENTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.TORMENTIUM_INGOT, .5f, 200, "tormentium");
+
+        offerSmelting(exporter, PEAT_SMELTABLES, RecipeCategory.MISC, ModItems.DRIED_PEAT_CLUMP, .25f, 100, "peat");
+
+
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SAPPHIRE,RecipeCategory.DECORATIONS, ModBlocks.SAPPHIRE_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TORMENTIUM_INGOT,RecipeCategory.DECORATIONS, ModBlocks.TORMENTIUM_BLOCK);
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.PEAT_CLUMP,RecipeCategory.MISC, Blocks.MOSS_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TORMENTIUM,RecipeCategory.DECORATIONS, ModBlocks.RAW_TORMENTIUM_BLOCK);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STRING, 2)
                 .input(ModItems.PLANT_FIBER)
                 .criterion("has_plant_fiber", conditionsFromItem(ModItems.PLANT_FIBER))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "string_from_plant_fiber"));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_PLANKS, 4)
                 .input(ModBlocks.CYPRESS_LOG)
                 .criterion("has_cypress_log", conditionsFromItem(ModBlocks.CYPRESS_LOG))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_planks_from_cypress_log"));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_PLANKS, 4)
                 .input(ModBlocks.CYPRESS_WOOD)
                 .criterion("has_cypress_wood", conditionsFromItem(ModBlocks.CYPRESS_WOOD))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_planks_from_cypress_wood"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.CRAFTING_TABLE, 1)
                 .pattern("   ")
                 .pattern("xx ")
@@ -136,5 +150,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('x', ModBlocks.CYPRESS_LOG)
                 .criterion("has_cypress_log", conditionsFromItem(ModBlocks.CYPRESS_LOG))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_wood_from_cypress_log"));
+
+    ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.MOSS_CARPET, 3)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("xx ")
+                .input('x', ModItems.PEAT_CLUMP)
+                .criterion("has_peat_clump", conditionsFromItem(ModItems.PEAT_CLUMP))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "moss_carpet_from_peat_clump"));
+
+    ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DRIED_PEAT_BLOCK, 1)
+                .pattern("xxx")
+                .pattern("rrr")
+                .pattern("xxx")
+                .input('x', ModItems.DRIED_PEAT_CLUMP)
+                .input('r', ModItems.PLANT_FIBER)
+                .criterion("has_dried_peat_clump", conditionsFromItem(ModItems.DRIED_PEAT_CLUMP))
+                .criterion("has_plant_fiber", conditionsFromItem(ModItems.PLANT_FIBER))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dried_peat_block_recipe"));
+
+
+
     }
 }

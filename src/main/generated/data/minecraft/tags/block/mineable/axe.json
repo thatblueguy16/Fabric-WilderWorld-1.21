@@ -2,6 +2,12 @@
   "values": [
     "wilderworld:cypress_log",
     "wilderworld:cypress_wood",
+    "wilderworld:cypress_fence_gate",
+    "wilderworld:cypress_fence",
+    "wilderworld:cypress_door",
+    "wilderworld:cypress_trapdoor",
+    "wilderworld:cypress_stair",
+    "wilderworld:cypress_slab",
     "wilderworld:cypress_planks"
   ]
 }

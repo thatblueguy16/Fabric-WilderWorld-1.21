@@ -44,9 +44,18 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CYPRESS_DOOR, doorDrops(ModBlocks.CYPRESS_DOOR));
         addDrop(ModBlocks.CYPRESS_TRAPDOOR);
 
+        addDrop(ModBlocks.TORMENTIUM_BLOCK);
+        addDrop(ModBlocks.RAW_TORMENTIUM_BLOCK);
+
+        addDrop(ModBlocks.DRIED_PEAT_BLOCK);
+        addDrop(ModBlocks.MAGIC_BLOCK);
+
 
         addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));
         addDrop(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, ModItems.SAPPHIRE,1,1));
+
+        addDrop(ModBlocks.TORMENTIUM_ORE, oreDrops(ModBlocks.TORMENTIUM_ORE, ModItems.RAW_TORMENTIUM));
+        addDrop(ModBlocks.DEEPSLATE_TORMENTIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_TORMENTIUM_ORE, ModItems.RAW_TORMENTIUM,1,1));
 
     }
 

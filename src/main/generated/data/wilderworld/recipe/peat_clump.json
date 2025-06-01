@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:moss_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "wilderworld:peat_clump"
+  }
+}

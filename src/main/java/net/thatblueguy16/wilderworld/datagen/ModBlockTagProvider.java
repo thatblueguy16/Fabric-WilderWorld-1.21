@@ -18,15 +18,37 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.SAPPHIRE_BLOCK)
                 .add(ModBlocks.SAPPHIRE_ORE)
-                .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+
+                .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
+                .add(ModBlocks.DEEPSLATE_TORMENTIUM_ORE)
+
+                .add(ModBlocks.TORMENTIUM_ORE)
+                .add(ModBlocks.MAGIC_BLOCK);
+
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SAPPHIRE_ORE)
                 .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
 
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.DEEPSLATE_TORMENTIUM_ORE)
+                .add(ModBlocks.TORMENTIUM_ORE)
+
+                .add(ModBlocks.MAGIC_BLOCK);
+
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CYPRESS_LOG)
                 .add(ModBlocks.CYPRESS_WOOD)
+
+                .add(ModBlocks.CYPRESS_FENCE_GATE)
+                .add(ModBlocks.CYPRESS_FENCE)
+
+                .add(ModBlocks.CYPRESS_DOOR)
+                .add(ModBlocks.CYPRESS_TRAPDOOR)
+
+                .add(ModBlocks.CYPRESS_STAIR)
+                .add(ModBlocks.CYPRESS_SLAB)
+
                 .add(ModBlocks.CYPRESS_PLANKS);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.CYPRESS_FENCE);

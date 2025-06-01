@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "wilderworld:tormentium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "wilderworld:tormentium_ingot"
+  }
+}

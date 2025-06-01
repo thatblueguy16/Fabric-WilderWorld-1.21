@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "peat",
+  "ingredient": {
+    "item": "wilderworld:peat_clump"
+  },
+  "result": {
+    "id": "wilderworld:dried_peat_clump"
+  }
+}

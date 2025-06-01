@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model": "wilderworld:block/dried_peat_block" },
+    "axis=z": { "model": "wilderworld:block/dried_peat_block", "x": 90 },
+    "axis=x": { "model": "wilderworld:block/dried_peat_block", "x": 90, "y": 90 }
+  }
+}

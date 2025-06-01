@@ -37,6 +37,15 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.CYPRESS_TRAPDOOR);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CYPRESS_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TORMENTIUM_BLOCK);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_TORMENTIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_TORMENTIUM_ORE);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TORMENTIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DRIED_PEAT_BLOCK);
 
 
     }
@@ -45,7 +54,16 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.PLANT_FIBER, Models.GENERATED);
         itemModelGenerator.register(ModItems.SAPPHIRE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.MISTCALL_LANTERN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_TORMENTIUM, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.TORMENTIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLOWROOT_BULB, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.MASHED_GLOWROOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PEAT_CLUMP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRIED_PEAT_CLUMP, Models.GENERATED);
 
 
 

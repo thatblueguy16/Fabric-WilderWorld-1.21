@@ -1,7 +1,17 @@
 {
   "item.wilderworld.plant_fiber": "Plant Fiber",
   "item.wilderworld.sapphire": "Sapphire",
+
   "item.wilderworld.mistcall_lantern": "Mistcall Lantern",
+  "item.wilderworld.raw_tormentium": "Raw Tormentium",
+
+  "item.wilderworld.tormentium_ingot": "Tormentium Ingot",
+  "item.wilderworld.glowroot_bulb": "Glowroot Bulb",
+
+  "item.wilderworld.mashed_glowroot": "Mashed Glowroot",
+  "item.wilderworld.peat_clump": "Peat Clump",
+
+  "item.wilderworld.dried_peat_clump": "Dried Peat Clump",
 
   "block.wilderworld.cypress_wood": "Cypress Wood",
   "block.wilderworld.cypress_planks": "Cypress Planks",
@@ -25,6 +35,16 @@
   "block.wilderworld.cypress_door": "Cypress Door",
 
   "block.wilderworld.cypress_trapdoor": "Cypress Trapdoor",
+  "block.wilderworld.tormentium_block": "Tormentium Block",
+
+  "block.wilderworld.raw_tormentium_block": "Raw Tormentium Block",
+  "block.wilderworld.tormentium_ore": "Tormentium Ore",
+
+  "block.wilderworld.deepslate_tormentium_ore": "Deepslate Tormentium Ore",
+  "block.wilderworld.magic_block": "Magic Block",
+
+  "block.wilderworld.dried_peat_block": "Dried Peat Block",
+
 
 
   "itemgroup.wilderworld.misty_mire": "Misty Mire",

@@ -43,6 +43,24 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CYPRESS_DOOR);
                         entries.add(ModBlocks.CYPRESS_TRAPDOOR);
 
+                        entries.add(ModBlocks.TORMENTIUM_BLOCK);
+                        entries.add(ModBlocks.RAW_TORMENTIUM_BLOCK);
+
+                        entries.add(ModBlocks.TORMENTIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_TORMENTIUM_ORE);
+
+                        entries.add(ModItems.RAW_TORMENTIUM);
+                        entries.add(ModItems.TORMENTIUM_INGOT);
+
+                        entries.add(ModBlocks.MAGIC_BLOCK);
+                        entries.add(ModItems.GLOWROOT_BULB);
+
+                        entries.add(ModItems.MASHED_GLOWROOT);
+                        entries.add(ModItems.PEAT_CLUMP);
+
+                        entries.add(ModBlocks.DRIED_PEAT_BLOCK);
+                        entries.add(ModItems.DRIED_PEAT_CLUMP);
+
 
 
 
