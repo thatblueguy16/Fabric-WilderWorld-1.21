@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "wilderworld:block/cypress_planks",
+    "side": "wilderworld:block/cypress_planks",
+    "top": "wilderworld:block/cypress_planks"
+  }
+}

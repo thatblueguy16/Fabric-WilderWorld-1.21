@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "x": {
+      "item": "wilderworld:cypress_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "x  ",
+    "x  "
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:stick"
+  }
+}

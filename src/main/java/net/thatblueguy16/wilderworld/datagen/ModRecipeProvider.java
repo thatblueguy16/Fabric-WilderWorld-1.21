@@ -8,6 +8,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -54,5 +55,86 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "crafting_table_from_cypress_planks"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_DOOR, 3)
+                .pattern("xx ")
+                .pattern("xx ")
+                .pattern("xx ")
+                .input('x', ModBlocks.CYPRESS_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_door_from_cypress_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_STAIR, 4)
+                .pattern("x  ")
+                .pattern("xx ")
+                .pattern("xxx")
+                .input('x', ModBlocks.CYPRESS_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_stair_from_cypress_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_TRAPDOOR, 2)
+                .pattern("   ")
+                .pattern("xxx")
+                .pattern("xxx")
+                .input('x', ModBlocks.CYPRESS_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_trapdoor_from_cypress_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_SLAB, 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("xxx")
+                .input('x', ModBlocks.CYPRESS_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_slab_from_cypress_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_FENCE, 3)
+                .pattern("   ")
+                .pattern("xrx")
+                .pattern("xrx")
+                .input('x', ModBlocks.CYPRESS_PLANKS)
+                .input('r',Items.STICK)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                    .criterion("has_stick", conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_fence_from_cypress_planks"));
+
+                ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_FENCE_GATE, 1)
+                .pattern("   ")
+                .pattern("rxr")
+                .pattern("rxr")
+                .input('x', ModBlocks.CYPRESS_PLANKS)
+                .input('r',Items.STICK)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                        .criterion("has_stick", conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_fence_gate_from_cypress_planks"));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_PRESSURE_PLATE, 2)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("xx ")
+                .input('x', ModBlocks.CYPRESS_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_pressure_plate_from_cypress_planks"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_BUTTON, 1)
+                .input(ModBlocks.CYPRESS_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_button_from_cypress_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STICK, 4)
+                .pattern("   ")
+                .pattern("x  ")
+                .pattern("x  ")
+                .input('x', ModBlocks.CYPRESS_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "stick_from_cypress_planks"));
+
+    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_WOOD, 3)
+                .pattern("   ")
+                .pattern("xx ")
+                .pattern("xx ")
+                .input('x', ModBlocks.CYPRESS_LOG)
+                .criterion("has_cypress_log", conditionsFromItem(ModBlocks.CYPRESS_LOG))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_wood_from_cypress_log"));
     }
 }

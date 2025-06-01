@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "x": {
+      "item": "wilderworld:cypress_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "xrx",
+    "xrx"
+  ],
+  "result": {
+    "count": 3,
+    "id": "wilderworld:cypress_fence"
+  }
+}

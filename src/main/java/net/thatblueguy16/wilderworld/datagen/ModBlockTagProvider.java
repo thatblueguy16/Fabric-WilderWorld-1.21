@@ -28,5 +28,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CYPRESS_LOG)
                 .add(ModBlocks.CYPRESS_WOOD)
                 .add(ModBlocks.CYPRESS_PLANKS);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.CYPRESS_FENCE);
+
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.CYPRESS_FENCE_GATE);
+
+        getOrCreateTagBuilder(BlockTags.WALLS);
+
+        getOrCreateTagBuilder(BlockTags.LEAVES).add(ModBlocks.CYPRESS_LEAVES);
+
+
     }
 }

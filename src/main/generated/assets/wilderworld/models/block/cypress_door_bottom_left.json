@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "wilderworld:block/cypress_door_bottom",
+    "top": "wilderworld:block/cypress_door_top"
+  }
+}

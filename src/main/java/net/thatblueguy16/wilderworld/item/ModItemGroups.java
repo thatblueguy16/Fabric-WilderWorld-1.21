@@ -18,14 +18,34 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.PLANT_FIBER);
                         entries.add(ModItems.SAPPHIRE);
+
                         entries.add(ModBlocks.CYPRESS_PLANKS);
                         entries.add(ModBlocks.CYPRESS_WOOD);
+
                         entries.add(ModBlocks.SAPPHIRE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+
                         entries.add(ModBlocks.SAPPHIRE_BLOCK);
                         entries.add(ModItems.MISTCALL_LANTERN);
+
                         entries.add(ModBlocks.CYPRESS_LOG);
                         entries.add(ModBlocks.CYPRESS_LEAVES);
+
+                        entries.add(ModBlocks.CYPRESS_STAIR);
+                        entries.add(ModBlocks.CYPRESS_SLAB);
+
+                        entries.add(ModBlocks.CYPRESS_BUTTON);
+                        entries.add(ModBlocks.CYPRESS_PRESSURE_PLATE);
+
+                        entries.add(ModBlocks.CYPRESS_FENCE);
+                        entries.add(ModBlocks.CYPRESS_FENCE_GATE);
+
+                        entries.add(ModBlocks.CYPRESS_DOOR);
+                        entries.add(ModBlocks.CYPRESS_TRAPDOOR);
+
+
+
+
                     }).build());
 
     public static final ItemGroup RUSTY_STEPPE_GROUP = Registry.register(Registries.ITEM_GROUP,

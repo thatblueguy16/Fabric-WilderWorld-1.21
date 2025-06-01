@@ -28,8 +28,22 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.SAPPHIRE_BLOCK);
         addDrop(ModBlocks.CYPRESS_LOG);
+
         addDrop(ModBlocks.CYPRESS_PLANKS);
+        addDrop(ModBlocks.CYPRESS_SLAB, slabDrops(ModBlocks.CYPRESS_SLAB));
+
+        addDrop(ModBlocks.CYPRESS_STAIR);
         addDrop(ModBlocks.CYPRESS_WOOD);
+
+        addDrop(ModBlocks.CYPRESS_BUTTON);
+        addDrop(ModBlocks.CYPRESS_PRESSURE_PLATE);
+
+        addDrop(ModBlocks.CYPRESS_FENCE);
+        addDrop(ModBlocks.CYPRESS_FENCE_GATE);
+
+        addDrop(ModBlocks.CYPRESS_DOOR, doorDrops(ModBlocks.CYPRESS_DOOR));
+        addDrop(ModBlocks.CYPRESS_TRAPDOOR);
+
 
         addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));
         addDrop(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, ModItems.SAPPHIRE,1,1));

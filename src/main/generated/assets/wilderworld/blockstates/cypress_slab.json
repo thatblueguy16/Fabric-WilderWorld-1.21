@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wilderworld:block/cypress_slab"
+    },
+    "type=double": {
+      "model": "wilderworld:block/cypress_planks"
+    },
+    "type=top": {
+      "model": "wilderworld:block/cypress_slab_top"
+    }
+  }
+}

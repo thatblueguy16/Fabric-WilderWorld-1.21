@@ -17,11 +17,26 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_ORE);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CYPRESS_WOOD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CYPRESS_PLANKS);
+
+        BlockStateModelGenerator.BlockTexturePool cypressPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CYPRESS_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CYPRESS_LOG);
 
+        cypressPlanksPool.stairs(ModBlocks.CYPRESS_STAIR);
+        cypressPlanksPool.slab(ModBlocks.CYPRESS_SLAB);
+
+        cypressPlanksPool.button(ModBlocks.CYPRESS_BUTTON);
+        cypressPlanksPool.pressurePlate(ModBlocks.CYPRESS_PRESSURE_PLATE);
+
+        cypressPlanksPool.fence(ModBlocks.CYPRESS_FENCE);
+        cypressPlanksPool.fenceGate(ModBlocks.CYPRESS_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.CYPRESS_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.CYPRESS_TRAPDOOR);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CYPRESS_LEAVES);
 
 
     }

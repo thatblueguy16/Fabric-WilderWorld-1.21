@@ -1,7 +1,6 @@
 {
-  "parent": "minecraft:block/leaves",
+  "parent": "minecraft:block/cube_all",
   "textures": {
     "all": "wilderworld:block/cypress_leaves"
-  },
-  "render_type": "cutout"
+  }
 }

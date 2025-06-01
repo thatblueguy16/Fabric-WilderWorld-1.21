@@ -1,9 +1,7 @@
 package net.thatblueguy16.wilderworld.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -15,6 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.thatblueguy16.wilderworld.WilderWorld;
 
+import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
 import static net.minecraft.block.Blocks.register;
 
 public class ModBlocks {
@@ -23,6 +22,7 @@ public class ModBlocks {
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
                     .burnable()));
+
     public static final Block CYPRESS_PLANKS = registerBlock("cypress_planks",
             new Block(AbstractBlock.Settings.create()
                     .strength(2f)
@@ -33,6 +33,7 @@ public class ModBlocks {
                     .requiresTool()
                     .strength(3f)
                     .sounds(BlockSoundGroup.STONE)));
+
     public static final Block DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3,6), AbstractBlock.Settings.create()
                     .requiresTool()
@@ -43,6 +44,7 @@ public class ModBlocks {
                     .strength(4f)
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)
                     .requiresTool()));
+
     public static final Block CYPRESS_LOG = registerBlock("cypress_log",
             new PillarBlock(AbstractBlock.Settings.create()
                     .strength(2f)
@@ -60,6 +62,54 @@ public class ModBlocks {
                     .burnable()
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .solidBlock(Blocks::never)));
+
+    public static final Block CYPRESS_STAIR = registerBlock("cypress_stair",
+            new StairsBlock(ModBlocks.CYPRESS_PLANKS.getDefaultState(), AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+    public static final Block CYPRESS_SLAB = registerBlock("cypress_slab",
+            new SlabBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+
+    public static final Block CYPRESS_BUTTON = registerBlock("cypress_button",
+            new ButtonBlock(BlockSetType.DARK_OAK, 5, AbstractBlock.Settings.create()
+                            .strength(1f)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()
+                            .noCollision()));
+    public static final Block CYPRESS_PRESSURE_PLATE = registerBlock("cypress_pressure_plate",
+            new PressurePlateBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                            .strength(1.5f)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()));
+
+    public static final Block CYPRESS_FENCE = registerBlock("cypress_fence",
+            new FenceBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+    public static final Block CYPRESS_FENCE_GATE = registerBlock("cypress_fence_gate",
+            new FenceGateBlock(WoodType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+
+    public static final Block CYPRESS_DOOR = registerBlock("cypress_door",
+            new DoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()
+                    .nonOpaque()));
+
+    public static final Block CYPRESS_TRAPDOOR = registerBlock("cypress_trapdoor",
+            new TrapdoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()
+                    .nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {

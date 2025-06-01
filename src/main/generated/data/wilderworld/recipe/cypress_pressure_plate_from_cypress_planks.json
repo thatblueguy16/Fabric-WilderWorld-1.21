@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": {
+      "item": "wilderworld:cypress_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "xx "
+  ],
+  "result": {
+    "count": 2,
+    "id": "wilderworld:cypress_pressure_plate"
+  }
+}

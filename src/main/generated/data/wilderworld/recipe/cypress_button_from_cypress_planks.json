@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "wilderworld:cypress_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "wilderworld:cypress_button"
+  }
+}
