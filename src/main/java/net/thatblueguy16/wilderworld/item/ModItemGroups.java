@@ -61,6 +61,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DRIED_PEAT_BLOCK);
                         entries.add(ModItems.DRIED_PEAT_CLUMP);
 
+                        entries.add(ModBlocks.LUMENPOD_BLOCK);
+                        entries.add(ModItems.CHISEL);
+
 
 
 

@@ -12,6 +12,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.thatblueguy16.wilderworld.WilderWorld;
+import net.thatblueguy16.wilderworld.block.custom.LumenPodBlock;
 import net.thatblueguy16.wilderworld.block.custom.MagicBlock;
 
 import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
@@ -143,10 +144,16 @@ public static final Block RAW_TORMENTIUM_BLOCK = registerBlock("raw_tormentium_b
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     public static final Block DRIED_PEAT_BLOCK = registerBlock("dried_peat_block",
-            new Block(AbstractBlock.Settings.create()
+            new PillarBlock(AbstractBlock.Settings.create()
                     .strength(1f)
                     .sounds(BlockSoundGroup.MOSS_BLOCK)
                     .burnable()));
+
+    public static final Block LUMENPOD_BLOCK = registerBlock("lumenpod_block",
+            new LumenPodBlock(AbstractBlock.Settings.create()
+                    .strength(1f)
+                    .sounds(BlockSoundGroup.FROGLIGHT)
+                    .luminance(state ->state.get(LumenPodBlock.CLICKED) ? 15 :0 )));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

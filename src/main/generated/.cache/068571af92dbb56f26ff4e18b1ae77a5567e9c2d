@@ -1,11 +1,11 @@
-// 1.21	2025-06-01T16:33:24.0596086	WilderWorld/Block Loot Tables
+// 1.21	2025-06-01T22:20:08.9299039	WilderWorld/Block Loot Tables
 65eab0493f319c4eea01e51ff1a01430b62df3da data\wilderworld\loot_table\blocks\cypress_stair.json
 096d5640dd251babce0177958f249d5edfeb739a data\wilderworld\loot_table\blocks\cypress_door.json
 8ba47e6899356f5b6f2053e711a7554d11780a31 data\wilderworld\loot_table\blocks\dried_peat_block.json
 a4dac522eded0906caf090f08b1b2a930bab5e1d data\wilderworld\loot_table\blocks\cypress_trapdoor.json
 5b32f1da82e32117a126e9788f07f11abbe36768 data\wilderworld\loot_table\blocks\cypress_slab.json
-a320f62cd32bcf2039ada6ee0b68efb3c1d151a5 data\wilderworld\loot_table\blocks\cypress_button.json
 07042f328eb693f836bc5b2ecf4d7db7465a26f2 data\wilderworld\loot_table\blocks\cypress_planks.json
+a320f62cd32bcf2039ada6ee0b68efb3c1d151a5 data\wilderworld\loot_table\blocks\cypress_button.json
 ce1ccce75e3e4a157011c84bd5e0e54464fd4618 data\wilderworld\loot_table\blocks\sapphire_ore.json
 22ac4b994706c8c3915944646bd6216ad4f06d2c data\wilderworld\loot_table\blocks\tormentium_ore.json
 d9041cdaa8f9abaded6e8e16dfe3f1bd6e2f43d0 data\wilderworld\loot_table\blocks\sapphire_block.json

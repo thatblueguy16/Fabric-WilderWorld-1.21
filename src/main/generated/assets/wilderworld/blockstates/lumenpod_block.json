@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "wilderworld:block/lumenpod_block"
+    },
+    "clicked=true": {
+      "model": "wilderworld:block/lumenpod_block_on"
+    }
+  }
+}

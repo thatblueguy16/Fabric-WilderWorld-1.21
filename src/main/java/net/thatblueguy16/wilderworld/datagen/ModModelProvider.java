@@ -2,10 +2,10 @@ package net.thatblueguy16.wilderworld.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
+import net.thatblueguy16.wilderworld.block.custom.LumenPodBlock;
 import net.thatblueguy16.wilderworld.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -47,6 +47,11 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DRIED_PEAT_BLOCK);
 
+        Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.LUMENPOD_BLOCK, blockStateModelGenerator.modelCollector);
+        Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.LUMENPOD_BLOCK, "_on", Models.CUBE_ALL, TextureMap::all);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.LUMENPOD_BLOCK)
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(LumenPodBlock.CLICKED, lampOnIdentifier, lampOffIdentifier)));
+
 
     }
 
@@ -63,7 +68,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.MASHED_GLOWROOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.PEAT_CLUMP, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.DRIED_PEAT_CLUMP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
 
 
 
