@@ -9,6 +9,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.thatblueguy16.wilderworld.WilderWorld;
 import net.thatblueguy16.wilderworld.item.custom.ChiselItem;
+import net.thatblueguy16.wilderworld.item.custom.HammerItem;
 import net.thatblueguy16.wilderworld.item.custom.LanternItem;
 
 import java.util.List;
@@ -67,6 +68,10 @@ public class ModItems {
             new HoeItem(ModToolMaterials.TORMENTIUM,
                     new Item.Settings()
                             .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.TORMENTIUM, 0, -3.0f))));
+    public static final Item TORMENTIUM_HAMMER = registerItem("tormentium_hammer",
+            new PickaxeItem(ModToolMaterials.TORMENTIUM,
+                    new Item.Settings()
+                            .attributeModifiers(HammerItem.createAttributeModifiers(ModToolMaterials.TORMENTIUM,7,-3.4f))));
 
 
 

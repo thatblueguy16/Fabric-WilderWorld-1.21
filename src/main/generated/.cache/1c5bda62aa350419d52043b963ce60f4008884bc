@@ -1,4 +1,4 @@
-// 1.21	2025-06-02T20:01:27.0337593	WilderWorld/Model Definitions
+// 1.21	2025-06-02T22:00:35.4743468	WilderWorld/Model Definitions
 57787c4a47a66c9529a0f331e6ce4dcc4dbaf150 assets\wilderworld\models\block\cypress_wood.json
 16473e7f59f2c2b08c2889e9a951a798d6eb6ae2 assets\wilderworld\blockstates\dried_peat_block.json
 787fb15341e2256db3b8ca644843ae22463f31b4 assets\wilderworld\models\item\tormentium_ore.json
@@ -51,6 +51,7 @@ cfd14fdb69754521576d8a0d716b106fa83af925 assets\wilderworld\models\item\dried_pe
 a00e2d91c36f516ab31cb27163c80587c06071e4 assets\wilderworld\models\block\tormentium_ore.json
 ecbe7b215bd995e3b99a6b90e3f59fc6f712b535 assets\wilderworld\models\block\cypress_stair_inner.json
 8a71a2d5d21e2c5f49b5d17ebe6b4346552b853d assets\wilderworld\models\item\plant_fiber.json
+96ebfd0a50abe9eddbe6eea530826f5e3c7a9042 assets\wilderworld\models\item\tormentium_hammer.json
 0f784bdff8270125faa354684db2feb022c4dbaa assets\wilderworld\models\item\cypress_wood.json
 3119e837f4cd3d649586dd37797052d842b895ca assets\wilderworld\models\item\cypress_log.json
 2bbb2922d355c909a51a1a9d1aad85ea3e054e13 assets\wilderworld\models\block\cypress_door_top_left_open.json

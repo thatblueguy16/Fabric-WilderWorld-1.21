@@ -48,8 +48,8 @@ public class LanternItem extends Item {
 
         }
 
-        // Apply 5-second cooldown (100 ticks)
         player.getItemCooldownManager().set(this, 100);
+
 
         return TypedActionResult.success(stack, world.isClient());
     }

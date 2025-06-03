@@ -71,6 +71,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TORMENTIUM_SHOVEL);
 
                         entries.add(ModItems.TORMENTIUM_HOE);
+                        entries.add(ModItems.TORMENTIUM_HAMMER);
 
 
 

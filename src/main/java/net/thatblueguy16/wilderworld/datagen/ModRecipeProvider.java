@@ -179,7 +179,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_SWORD,
                 .criterion("has_stick", conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_sword_recipe"));
 
-ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_PICKAXE, 1)
+ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TORMENTIUM_PICKAXE, 1)
                 .pattern("xxx")
                 .pattern(" r ")
                 .pattern(" r ")
@@ -199,7 +199,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_AXE, 1
                 .criterion("has_stick", conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_axe_recipe"));
 
-ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_SHOVEL, 1)
+ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TORMENTIUM_SHOVEL, 1)
                 .pattern(" x ")
                 .pattern(" r ")
                 .pattern(" r ")
@@ -209,7 +209,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_SHOVEL
                 .criterion("has_stick", conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_shovel_recipe"));
 
-ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_HOE, 1)
+ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TORMENTIUM_HOE, 1)
                 .pattern("xx ")
                 .pattern(" r ")
                 .pattern(" r ")
@@ -218,6 +218,30 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_HOE, 1
                 .criterion("has+tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
                 .criterion("has_stick", conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_hoe_recipe"));
+
+ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MISTCALL_LANTERN, 1)
+                .pattern("cxc")
+                .pattern("crc")
+                .pattern("cxc")
+                .input('x', ModItems.TORMENTIUM_INGOT)
+                .input('r', ModBlocks.LUMENPOD_BLOCK)
+                .input('c', Items.COPPER_INGOT)
+                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
+                .criterion("has_lumenpod_block", conditionsFromItem(ModBlocks.LUMENPOD_BLOCK))
+                .criterion("has_copper_ingot", conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "mistcall_lantern_recipe"));
+
+ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TORMENTIUM_HAMMER, 1)
+                .pattern("xxx")
+                .pattern("xrx")
+                .pattern(" c ")
+                .input('x', ModItems.TORMENTIUM_INGOT)
+                .input('r', Items.NETHERITE_INGOT)
+                .input('c', Items.STICK)
+                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
+                .criterion("has_netherite_ingot", conditionsFromItem(Items.NETHERITE_INGOT))
+                .criterion("has_stich", conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_hammer_recipe"));
 
 
 

@@ -2,11 +2,13 @@ package net.thatblueguy16.wilderworld;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
 import net.thatblueguy16.wilderworld.component.ModDataComponentTypes;
 import net.thatblueguy16.wilderworld.item.ModItemGroups;
 import net.thatblueguy16.wilderworld.item.ModItems;
+import net.thatblueguy16.wilderworld.util.HammerUsageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +24,8 @@ public class WilderWorld implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModDataComponentTypes.registerDataComponentTypes();
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 		FuelRegistry.INSTANCE.add(ModBlocks.CYPRESS_BUTTON, 100);
 		FuelRegistry.INSTANCE.add(ModBlocks.CYPRESS_LOG, 300);

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "wilderworld:item/tormentium_hammer"
+  }
+}

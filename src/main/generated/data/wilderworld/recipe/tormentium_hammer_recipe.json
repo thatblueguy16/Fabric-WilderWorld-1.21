@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "r": {
+    "c": {
       "item": "minecraft:stick"
+    },
+    "r": {
+      "item": "minecraft:netherite_ingot"
     },
     "x": {
       "item": "wilderworld:tormentium_ingot"
     }
   },
   "pattern": [
-    "xx ",
-    " r ",
-    " r "
+    "xxx",
+    "xrx",
+    " c "
   ],
   "result": {
     "count": 1,
-    "id": "wilderworld:tormentium_hoe"
+    "id": "wilderworld:tormentium_hammer"
   }
 }

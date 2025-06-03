@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "c": {
+      "item": "minecraft:copper_ingot"
+    },
     "r": {
-      "item": "minecraft:stick"
+      "item": "wilderworld:lumenpod_block"
     },
     "x": {
       "item": "wilderworld:tormentium_ingot"
     }
   },
   "pattern": [
-    "xx ",
-    " r ",
-    " r "
+    "cxc",
+    "crc",
+    "cxc"
   ],
   "result": {
     "count": 1,
-    "id": "wilderworld:tormentium_hoe"
+    "id": "wilderworld:mistcall_lantern"
   }
 }
