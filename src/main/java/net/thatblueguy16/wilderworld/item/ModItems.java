@@ -1,9 +1,7 @@
 package net.thatblueguy16.wilderworld.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -39,6 +37,7 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+
     public static final Item PEAT_CLUMP = registerItem("peat_clump", new Item(new Item.Settings()));
     public static final Item DRIED_PEAT_CLUMP = registerItem("dried_peat_clump", new Item(new Item.Settings().food(ModFoodComponents.DRIED_PEAT_CLUMP)){
         @Override
@@ -47,6 +46,29 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+
+    public static final Item TORMENTIUM_SWORD = registerItem("tormentium_sword",
+            new SwordItem(ModToolMaterials.TORMENTIUM,
+                    new Item.Settings()
+                            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TORMENTIUM, 3, -2.4f))));
+ public static final Item TORMENTIUM_PICKAXE = registerItem("tormentium_pickaxe",
+            new PickaxeItem(ModToolMaterials.TORMENTIUM,
+                    new Item.Settings()
+                            .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.TORMENTIUM,6,-3.2f))));
+ public static final Item TORMENTIUM_AXE = registerItem("tormentium_axe",
+            new AxeItem(ModToolMaterials.TORMENTIUM,
+                    new Item.Settings()
+                            .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.TORMENTIUM, 1.5f, -3.0f))));
+ public static final Item TORMENTIUM_SHOVEL = registerItem("tormentium_shovel",
+            new ShovelItem(ModToolMaterials.TORMENTIUM,
+                    new Item.Settings()
+                            .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.TORMENTIUM, 3, -2.4f))));
+ public static final Item TORMENTIUM_HOE = registerItem("tormentium_hoe",
+            new HoeItem(ModToolMaterials.TORMENTIUM,
+                    new Item.Settings()
+                            .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.TORMENTIUM, 0, -3.0f))));
+
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(WilderWorld.MOD_ID, name), item);

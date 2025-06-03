@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
+import net.thatblueguy16.wilderworld.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -58,6 +59,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WALLS);
 
         getOrCreateTagBuilder(BlockTags.LEAVES).add(ModBlocks.CYPRESS_LEAVES);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_TORMENTIUM_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
 
     }

@@ -72,6 +72,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DRIED_PEAT_CLUMP, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.TORMENTIUM_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TORMENTIUM_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TORMENTIUM_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TORMENTIUM_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TORMENTIUM_HOE, Models.HANDHELD);
+
 
 
     }

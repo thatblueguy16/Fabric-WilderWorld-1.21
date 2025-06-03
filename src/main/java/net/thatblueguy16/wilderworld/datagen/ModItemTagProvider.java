@@ -2,6 +2,8 @@ package net.thatblueguy16.wilderworld.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.registry.tag.ItemTags;
+import net.thatblueguy16.wilderworld.item.ModItems;
 import net.thatblueguy16.wilderworld.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -14,6 +16,19 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS);
+        getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
+                .add(ModItems.SAPPHIRE);
+
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(ModItems.TORMENTIUM_SWORD);
+getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.TORMENTIUM_PICKAXE);
+getOrCreateTagBuilder(ItemTags.AXES)
+                .add(ModItems.TORMENTIUM_AXE);
+getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(ModItems.TORMENTIUM_SHOVEL);
+getOrCreateTagBuilder(ItemTags.HOES)
+                .add(ModItems.TORMENTIUM_HOE);
+
     }
 }

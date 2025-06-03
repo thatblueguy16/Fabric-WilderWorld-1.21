@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
+import net.thatblueguy16.wilderworld.component.ModDataComponentTypes;
 import net.thatblueguy16.wilderworld.item.ModItemGroups;
 import net.thatblueguy16.wilderworld.item.ModItems;
 import org.slf4j.Logger;
@@ -19,6 +20,8 @@ public class WilderWorld implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModDataComponentTypes.registerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModBlocks.CYPRESS_BUTTON, 100);
 		FuelRegistry.INSTANCE.add(ModBlocks.CYPRESS_LOG, 300);

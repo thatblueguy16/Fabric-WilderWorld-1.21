@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "x": {
+      "item": "wilderworld:tormentium_ingot"
+    }
+  },
+  "pattern": [
+    " x ",
+    " x ",
+    " r "
+  ],
+  "result": {
+    "count": 1,
+    "id": "wilderworld:tormentium_sword"
+  }
+}

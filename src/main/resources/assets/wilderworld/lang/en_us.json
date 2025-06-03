@@ -14,6 +14,14 @@
   "item.wilderworld.dried_peat_clump": "Dried Peat Clump",
   "item.wilderworld.chisel": "Chisel",
 
+  "item.wilderworld.tormentium_sword": "Tormentium Sword",
+  "item.wilderworld.tormentium_pickaxe": "Tormentium Pickaxe",
+
+  "item.wilderworld.tormentium_axe": "Tormentium Axe",
+  "item.wilderworld.tormentium_shovel": "Tormentium Shovel",
+
+  "item.wilderworld.tormentium_hoe": "Tormentium Hoe",
+
 
 
   "block.wilderworld.cypress_wood": "Cypress Wood",
@@ -50,8 +58,11 @@
   "block.wilderworld.lumenpod_block": "LumenPod Block",
 
 
+
   "itemgroup.wilderworld.misty_mire": "Misty Mire",
   "itemgroup.wilderworld.rusty_steppe": "Rusty Steppe",
+
+
 
   "tooltip.wilderworld.magic_block.tooltip0": "This block has §9MAGICAL properties§r",
   "tooltip.wilderworld.mistcall_lantern.shift_down": "This item §9highlights§r Mobs upon Right Click",
@@ -60,5 +71,8 @@
   "tooltip.wilderworld.glowroot_bulb.tooltip": "This has a special property",
 
   "tooltip.wilderworld.mashed_glowroot.tooltip": "Mashing it seems to have lengthened the effect",
-  "tooltip.wilderworld.dried_peat_clump.tooltip": "This isn't very good is it?"
+  "tooltip.wilderworld.dried_peat_clump.tooltip": "This isn't very good is it?",
+
+  "tooltip.wilderworld.chisel.shift_down": "Press Shift for more info",
+  "tooltip.wilderworld.chisel": "This Item can change certain Blocks"
 }

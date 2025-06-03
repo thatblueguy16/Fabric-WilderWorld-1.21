@@ -64,6 +64,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.LUMENPOD_BLOCK);
                         entries.add(ModItems.CHISEL);
 
+                        entries.add(ModItems.TORMENTIUM_SWORD);
+                        entries.add(ModItems.TORMENTIUM_PICKAXE);
+
+                        entries.add(ModItems.TORMENTIUM_AXE);
+                        entries.add(ModItems.TORMENTIUM_SHOVEL);
+
+                        entries.add(ModItems.TORMENTIUM_HOE);
+
 
 
 
