@@ -50,6 +50,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DRIED_PEAT_BLOCK);
         addDrop(ModBlocks.MAGIC_BLOCK);
 
+        addDrop(ModBlocks.CYPRESS_LEAVES, leavesDrops(ModBlocks.CYPRESS_LEAVES, ModBlocks.CYPRESS_SAPLING, 0.625f));
+
 
         addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));
         addDrop(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, ModItems.SAPPHIRE,1,1));

@@ -1,0 +1,8 @@
+{
+  "values": [
+    "wilderworld:cypress_log",
+    "wilderworld:stripped_cypress_log",
+    "wilderworld:stripped_cypress_wood",
+    "wilderworld:cypress_wood"
+  ]
+}

@@ -51,24 +51,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion("has_plant_fiber", conditionsFromItem(ModItems.PLANT_FIBER))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "string_from_plant_fiber"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_PLANKS, 4)
-                .input(ModBlocks.CYPRESS_LOG)
-                .criterion("has_cypress_log", conditionsFromItem(ModBlocks.CYPRESS_LOG))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_planks_from_cypress_log"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_PLANKS, 4)
-                .input(ModBlocks.CYPRESS_WOOD)
-                .criterion("has_cypress_wood", conditionsFromItem(ModBlocks.CYPRESS_WOOD))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_planks_from_cypress_wood"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.CRAFTING_TABLE, 1)
-                .pattern("   ")
-                .pattern("xx ")
-                .pattern("xx ")
-                .input('x', ModBlocks.CYPRESS_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "crafting_table_from_cypress_planks"));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_DOOR, 3)
                 .pattern("xx ")
                 .pattern("xx ")
@@ -134,22 +116,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.CYPRESS_PLANKS)
                 .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_button_from_cypress_planks"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STICK, 4)
-                .pattern("   ")
-                .pattern("x  ")
-                .pattern("x  ")
-                .input('x', ModBlocks.CYPRESS_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.CYPRESS_PLANKS))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "stick_from_cypress_planks"));
-
-    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYPRESS_WOOD, 3)
-                .pattern("   ")
-                .pattern("xx ")
-                .pattern("xx ")
-                .input('x', ModBlocks.CYPRESS_LOG)
-                .criterion("has_cypress_log", conditionsFromItem(ModBlocks.CYPRESS_LOG))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "cypress_wood_from_cypress_log"));
 
     ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.MOSS_CARPET, 3)
                 .pattern("   ")

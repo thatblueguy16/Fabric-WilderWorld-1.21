@@ -1,4 +1,4 @@
-// 1.21	2025-06-03T20:44:49.0598085	WilderWorld/Block Loot Tables
+// 1.21	2025-06-04T11:57:00.5254892	WilderWorld/Block Loot Tables
 65eab0493f319c4eea01e51ff1a01430b62df3da data\wilderworld\loot_table\blocks\cypress_stair.json
 096d5640dd251babce0177958f249d5edfeb739a data\wilderworld\loot_table\blocks\cypress_door.json
 8ba47e6899356f5b6f2053e711a7554d11780a31 data\wilderworld\loot_table\blocks\dried_peat_block.json
@@ -9,6 +9,7 @@ a320f62cd32bcf2039ada6ee0b68efb3c1d151a5 data\wilderworld\loot_table\blocks\cypr
 ce1ccce75e3e4a157011c84bd5e0e54464fd4618 data\wilderworld\loot_table\blocks\sapphire_ore.json
 22ac4b994706c8c3915944646bd6216ad4f06d2c data\wilderworld\loot_table\blocks\tormentium_ore.json
 d9041cdaa8f9abaded6e8e16dfe3f1bd6e2f43d0 data\wilderworld\loot_table\blocks\sapphire_block.json
+8eef11f0ffa3e6863530ea305abe4fa465a5414f data\wilderworld\loot_table\blocks\cypress_leaves.json
 5dbf9edf4b4a6469925323186033fe76566d27eb data\wilderworld\loot_table\blocks\cypress_wood.json
 7c25a15887764b262b60b7c4280adee32d7e36d8 data\wilderworld\loot_table\blocks\cypress_fence_gate.json
 2c241e71f1f0b7df75b93dc01f7a7e1299119d42 data\wilderworld\loot_table\blocks\cypress_pressure_plate.json

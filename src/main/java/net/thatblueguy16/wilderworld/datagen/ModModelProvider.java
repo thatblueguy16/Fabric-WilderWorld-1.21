@@ -25,6 +25,10 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool cypressPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CYPRESS_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CYPRESS_LOG);
 
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_CYPRESS_LOG).wood(ModBlocks.STRIPPED_CYPRESS_WOOD);
+        blockStateModelGenerator.registerSingleton(ModBlocks.CYPRESS_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.CYPRESS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
         cypressPlanksPool.stairs(ModBlocks.CYPRESS_STAIR);
         cypressPlanksPool.slab(ModBlocks.CYPRESS_SLAB);
 
@@ -37,7 +41,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.CYPRESS_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.CYPRESS_TRAPDOOR);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CYPRESS_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TORMENTIUM_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_TORMENTIUM_BLOCK);

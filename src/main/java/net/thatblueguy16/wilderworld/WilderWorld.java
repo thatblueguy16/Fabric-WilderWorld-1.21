@@ -3,7 +3,10 @@ package net.thatblueguy16.wilderworld;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.block.FireBlock;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
 import net.thatblueguy16.wilderworld.component.ModDataComponentTypes;
 import net.thatblueguy16.wilderworld.item.ModItemGroups;
@@ -49,6 +52,25 @@ public class WilderWorld implements ModInitializer {
 
 		FuelRegistry.INSTANCE.add(ModBlocks.DRIED_PEAT_BLOCK, 16000);
 		FuelRegistry.INSTANCE.add(ModItems.DRIED_PEAT_CLUMP, 1600);
+
+		StrippableBlockRegistry.register(ModBlocks.CYPRESS_LOG, ModBlocks.STRIPPED_CYPRESS_LOG);
+		StrippableBlockRegistry.register(ModBlocks.CYPRESS_WOOD, ModBlocks.STRIPPED_CYPRESS_WOOD);
+
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_LOG, 5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_CYPRESS_LOG, 5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_WOOD, 5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_CYPRESS_WOOD, 5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_PLANKS, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_STAIR, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_SLAB, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_FENCE_GATE, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_FENCE, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_DOOR, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_TRAPDOOR, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_LEAVES, 30,60);
+
+
+
 
 	}
 }

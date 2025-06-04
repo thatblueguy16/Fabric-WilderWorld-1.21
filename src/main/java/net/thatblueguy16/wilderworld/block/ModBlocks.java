@@ -14,22 +14,13 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.thatblueguy16.wilderworld.WilderWorld;
 import net.thatblueguy16.wilderworld.block.custom.LumenPodBlock;
 import net.thatblueguy16.wilderworld.block.custom.MagicBlock;
+import net.thatblueguy16.wilderworld.world.tree.ModSaplingGenerator;
 
-import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
-import static net.minecraft.block.Blocks.register;
+import static net.minecraft.block.Blocks.*;
 
 public class ModBlocks {
-    public static final Block CYPRESS_WOOD = registerBlock("cypress_wood",
-            new PillarBlock(AbstractPlantStemBlock.Settings.create()
-                    .strength(2f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .burnable()));
 
-    public static final Block CYPRESS_PLANKS = registerBlock("cypress_planks",
-            new Block(AbstractBlock.Settings.create()
-                    .strength(2f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .burnable()));
+
     public static final Block SAPPHIRE_ORE = registerBlock("sapphire_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5), AbstractBlock.Settings.create()
                     .requiresTool()
@@ -48,22 +39,22 @@ public class ModBlocks {
                     .requiresTool()));
 
     public static final Block CYPRESS_LOG = registerBlock("cypress_log",
-            new PillarBlock(AbstractBlock.Settings.create()
-                    .strength(2f)
-                    .sounds(BlockSoundGroup.WOOD)
-                    .burnable()));
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+
+    public static final Block CYPRESS_WOOD = registerBlock("cypress_wood",
+            new PillarBlock(AbstractPlantStemBlock.Settings.copy(Blocks.OAK_WOOD)));
+public static final Block STRIPPED_CYPRESS_LOG = registerBlock("stripped_cypress_log",
+            new PillarBlock(AbstractPlantStemBlock.Settings.copy(STRIPPED_OAK_LOG)));
+public static final Block STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypress_wood",
+            new PillarBlock(AbstractPlantStemBlock.Settings.copy(STRIPPED_OAK_WOOD)));
+
+    public static final Block CYPRESS_PLANKS = registerBlock("cypress_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
     public static final Block CYPRESS_LEAVES = registerBlock("cypress_leaves",
-            new LeavesBlock(AbstractBlock.Settings.create()
-                    .strength(0.2F)
-                    .ticksRandomly()
-                    .sounds(BlockSoundGroup.GRASS)
-                    .nonOpaque()
-                    .allowsSpawning(Blocks::canSpawnOnLeaves)
-                    .suffocates(Blocks::never)
-                    .blockVision(Blocks::never)
-                    .burnable()
-                    .pistonBehavior(PistonBehavior.DESTROY)
-                    .solidBlock(Blocks::never)));
+            new LeavesBlock(AbstractBlock.Settings.copy(OAK_LEAVES)));
+
+public static final Block CYPRESS_SAPLING = registerBlock("cypress_sapling",
+            new SaplingBlock(ModSaplingGenerator.CYPRESS, AbstractBlock.Settings.copy(OAK_SAPLING)));
 
     public static final Block CYPRESS_STAIR = registerBlock("cypress_stair",
             new StairsBlock(ModBlocks.CYPRESS_PLANKS.getDefaultState(), AbstractBlock.Settings.create()

@@ -82,6 +82,11 @@ public class ModItemGroups {
                         entries.add(ModItems.SAPPHIRE_HORSE_ARMOR);
                         entries.add(ModItems.WORLD_SMITHING_TEMPLATE);
 
+                        entries.add(ModBlocks.CYPRESS_SAPLING);
+
+                        entries.add(ModBlocks.STRIPPED_CYPRESS_LOG);
+                        entries.add(ModBlocks.STRIPPED_CYPRESS_WOOD);
+
 
 
 

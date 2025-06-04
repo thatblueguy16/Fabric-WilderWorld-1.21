@@ -3,6 +3,7 @@ package net.thatblueguy16.wilderworld.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.tag.ItemTags;
+import net.thatblueguy16.wilderworld.block.ModBlocks;
 import net.thatblueguy16.wilderworld.item.ModItems;
 import net.thatblueguy16.wilderworld.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
@@ -41,6 +42,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
                 .add(ModItems.WORLD_SMITHING_TEMPLATE);
+
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CYPRESS_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_CYPRESS_LOG.asItem())
+                .add(ModBlocks.CYPRESS_LOG.asItem())
+                .add(ModBlocks.STRIPPED_CYPRESS_WOOD.asItem());
+
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.CYPRESS_PLANKS.asItem());
+
 
     }
 }

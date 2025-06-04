@@ -60,6 +60,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.LEAVES).add(ModBlocks.CYPRESS_LEAVES);
 
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CYPRESS_LOG)
+                .add(ModBlocks.STRIPPED_CYPRESS_LOG)
+                .add(ModBlocks.STRIPPED_CYPRESS_WOOD)
+                .add(ModBlocks.CYPRESS_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.CYPRESS_LEAVES);
+
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_TORMENTIUM_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
