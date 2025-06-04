@@ -73,6 +73,15 @@ public class ModItemGroups {
                         entries.add(ModItems.TORMENTIUM_HOE);
                         entries.add(ModItems.TORMENTIUM_HAMMER);
 
+                        entries.add(ModItems.TORMENTIUM_HELMET);
+                        entries.add(ModItems.TORMENTIUM_CHESTPLATE);
+
+                        entries.add(ModItems.TORMENTIUM_LEGGINGS);
+                        entries.add(ModItems.TORMENTIUM_BOOTS);
+
+                        entries.add(ModItems.SAPPHIRE_HORSE_ARMOR);
+                        entries.add(ModItems.WORLD_SMITHING_TEMPLATE);
+
 
 
 

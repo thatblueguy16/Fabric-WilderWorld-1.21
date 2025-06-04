@@ -5,6 +5,8 @@ import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.resource.featuretoggle.FeatureFlag;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.thatblueguy16.wilderworld.WilderWorld;
@@ -72,6 +74,25 @@ public class ModItems {
             new PickaxeItem(ModToolMaterials.TORMENTIUM,
                     new Item.Settings()
                             .attributeModifiers(HammerItem.createAttributeModifiers(ModToolMaterials.TORMENTIUM,7,-3.4f))));
+    public static final Item TORMENTIUM_HELMET = registerItem("tormentium_helmet",
+            new ArmorItem(ModArmorMaterials.TORMENTIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(25))));
+    public static final Item TORMENTIUM_CHESTPLATE = registerItem("tormentium_chestplate",
+            new ArmorItem(ModArmorMaterials.TORMENTIUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
+    public static final Item TORMENTIUM_LEGGINGS = registerItem("tormentium_leggings",
+            new ArmorItem(ModArmorMaterials.TORMENTIUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
+public static final Item TORMENTIUM_BOOTS = registerItem("tormentium_boots",
+            new ArmorItem(ModArmorMaterials.TORMENTIUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
+
+public static final Item SAPPHIRE_HORSE_ARMOR = registerItem("sapphire_horse_armor",
+        new AnimalArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, false, new Item.Settings().maxCount(1)));
+
+public static final Item WORLD_SMITHING_TEMPLATE = registerItem("world_smithing_template",
+        SmithingTemplateItem.of(Identifier.of(WilderWorld.MOD_ID, "world"), FeatureFlags.VANILLA));
+
 
 
 

@@ -23,6 +23,15 @@
   "item.wilderworld.tormentium_hoe": "Tormentium Hoe",
   "item.wilderworld.tormentium_hammer": "Tormentium Hammer",
 
+  "item.wilderworld.tormentium_helmet": "Tormentium Helmet",
+  "item.wilderworld.tormentium_chestplate": "Tormentium Chestplate",
+
+  "item.wilderworld.tormentium_leggings": "Tormentium Leggings",
+  "item.wilderworld.tormentium_boots": "Tormentium Boots",
+
+  "item.wilderworld.sapphire_horse_armor": "Sapphire Horse Armor",
+  "item.wilderworld.world_smithing_template": "World Smithing Template",
+
 
 
   "block.wilderworld.cypress_wood": "Cypress Wood",
@@ -75,5 +84,8 @@
   "tooltip.wilderworld.dried_peat_clump.tooltip": "This isn't very good is it?",
 
   "tooltip.wilderworld.chisel.shift_down": "Press Shift for more info",
-  "tooltip.wilderworld.chisel": "This Item can change certain Blocks"
+  "tooltip.wilderworld.chisel": "This Item can change certain Blocks",
+
+  "trim_material.wilderworld.sapphire": "Sapphire Material",
+  "trim_patter.wilderworld.world": "World Armor Pattern"
 }

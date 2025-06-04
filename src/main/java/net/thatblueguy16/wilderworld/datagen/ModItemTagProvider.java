@@ -21,14 +21,26 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.TORMENTIUM_SWORD);
-getOrCreateTagBuilder(ItemTags.PICKAXES)
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.TORMENTIUM_PICKAXE);
-getOrCreateTagBuilder(ItemTags.AXES)
+        getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.TORMENTIUM_AXE);
-getOrCreateTagBuilder(ItemTags.SHOVELS)
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .add(ModItems.TORMENTIUM_SHOVEL);
-getOrCreateTagBuilder(ItemTags.HOES)
+        getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.TORMENTIUM_HOE);
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.TORMENTIUM_HELMET)
+                .add(ModItems.TORMENTIUM_CHESTPLATE)
+                .add(ModItems.TORMENTIUM_LEGGINGS)
+                .add(ModItems.TORMENTIUM_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.SAPPHIRE);
+
+        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.WORLD_SMITHING_TEMPLATE);
 
     }
 }

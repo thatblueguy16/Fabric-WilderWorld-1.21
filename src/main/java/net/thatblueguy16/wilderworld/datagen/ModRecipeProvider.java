@@ -240,8 +240,44 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TORMENTIUM_HAMMER, 
                 .input('c', Items.STICK)
                 .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
                 .criterion("has_netherite_ingot", conditionsFromItem(Items.NETHERITE_INGOT))
-                .criterion("has_stich", conditionsFromItem(Items.STICK))
+                .criterion("has_stick", conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_hammer_recipe"));
+
+ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_HELMET, 1)
+                .pattern("xxx")
+                .pattern("x x")
+                .pattern("   ")
+                .input('x', ModItems.TORMENTIUM_INGOT)
+                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_helmet_recipe"));
+
+ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_CHESTPLATE, 1)
+                .pattern("x x")
+                .pattern("xxx")
+                .pattern("xxx")
+                .input('x', ModItems.TORMENTIUM_INGOT)
+                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_chestplate_recipe"));
+
+ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_LEGGINGS, 1)
+                .pattern("xxx")
+                .pattern("x x")
+                .pattern("x x")
+                .input('x', ModItems.TORMENTIUM_INGOT)
+                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_leggings_recipe"));
+
+ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_BOOTS, 1)
+                .pattern("x x")
+                .pattern("x x")
+                .pattern("   ")
+                .input('x', ModItems.TORMENTIUM_INGOT)
+                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_boots_recipe"));
+
+offerSmithingTrimRecipe(exporter, ModItems.WORLD_SMITHING_TEMPLATE, Identifier.of(WilderWorld.MOD_ID, "world"));
+
+
 
 
 

@@ -1,0 +1,8 @@
+{
+  "asset_id": "wilderworld:world",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.wilderworld.world"
+  },
+  "template_item": "wilderworld:world_smithing_template"
+}

@@ -3,6 +3,7 @@ package net.thatblueguy16.wilderworld.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
 import net.thatblueguy16.wilderworld.block.custom.LumenPodBlock;
@@ -80,6 +81,15 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.TORMENTIUM_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TORMENTIUM_HAMMER, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TORMENTIUM_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TORMENTIUM_CHESTPLATE));
+
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TORMENTIUM_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TORMENTIUM_BOOTS));
+
+        itemModelGenerator.register(ModItems.SAPPHIRE_HORSE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WORLD_SMITHING_TEMPLATE, Models.GENERATED);
 
 
 

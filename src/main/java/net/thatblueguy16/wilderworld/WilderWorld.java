@@ -9,6 +9,7 @@ import net.thatblueguy16.wilderworld.component.ModDataComponentTypes;
 import net.thatblueguy16.wilderworld.item.ModItemGroups;
 import net.thatblueguy16.wilderworld.item.ModItems;
 import net.thatblueguy16.wilderworld.util.HammerUsageEvent;
+import net.thatblueguy16.wilderworld.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +25,7 @@ public class WilderWorld implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModDataComponentTypes.registerDataComponentTypes();
+		ModWorldGeneration.generateModWorldGen();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
