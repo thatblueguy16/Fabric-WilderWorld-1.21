@@ -87,6 +87,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_CYPRESS_LOG);
                         entries.add(ModBlocks.STRIPPED_CYPRESS_WOOD);
 
+                        entries.add(ModBlocks.BROMELIAD);
+
 
 
 

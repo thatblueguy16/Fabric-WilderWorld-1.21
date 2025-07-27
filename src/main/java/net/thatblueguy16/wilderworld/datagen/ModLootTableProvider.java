@@ -29,6 +29,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SAPPHIRE_BLOCK);
         addDrop(ModBlocks.CYPRESS_LOG);
 
+        addDrop(ModBlocks.STRIPPED_CYPRESS_LOG);
+        addDrop(ModBlocks.STRIPPED_CYPRESS_WOOD);
+
         addDrop(ModBlocks.CYPRESS_PLANKS);
         addDrop(ModBlocks.CYPRESS_SLAB, slabDrops(ModBlocks.CYPRESS_SLAB));
 
@@ -51,6 +54,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MAGIC_BLOCK);
 
         addDrop(ModBlocks.CYPRESS_LEAVES, leavesDrops(ModBlocks.CYPRESS_LEAVES, ModBlocks.CYPRESS_SAPLING, 0.625f));
+        addDrop(ModBlocks.BROMELIAD);
+
+        addDrop(ModBlocks.CYPRESS_SAPLING);
 
 
         addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));

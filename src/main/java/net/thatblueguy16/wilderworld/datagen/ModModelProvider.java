@@ -26,8 +26,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CYPRESS_LOG);
 
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_CYPRESS_LOG).wood(ModBlocks.STRIPPED_CYPRESS_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_CYPRESS_LOG).log(ModBlocks.STRIPPED_CYPRESS_LOG);
+
         blockStateModelGenerator.registerSingleton(ModBlocks.CYPRESS_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.CYPRESS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.CYPRESS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.BROMELIAD, BlockStateModelGenerator.TintType.NOT_TINTED);
+
 
         cypressPlanksPool.stairs(ModBlocks.CYPRESS_STAIR);
         cypressPlanksPool.slab(ModBlocks.CYPRESS_SLAB);
@@ -94,7 +99,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SAPPHIRE_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.WORLD_SMITHING_TEMPLATE, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.CYPRESS_SAPLING, Models.GENERATED);
+
 
 
 

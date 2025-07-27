@@ -25,7 +25,6 @@ public class ModItems {
     public static final Item TORMENTIUM_INGOT = registerItem("tormentium_ingot", new Item(new Item.Settings()));
 
     public static final Item RAW_TORMENTIUM = registerItem("raw_tormentium", new Item(new Item.Settings()));
-    public static final Item CYPRESS_SAPLING = registerItem("cypress_sapling", new Item(new Item.Settings()));
     public static final Item GLOWROOT_BULB = registerItem("glowroot_bulb", new Item(new Item.Settings().food(ModFoodComponents.GLOWROOT_BULB)){
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

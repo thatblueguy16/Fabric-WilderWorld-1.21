@@ -1,4 +1,4 @@
-// 1.21	2025-06-04T11:57:00.5234903	WilderWorld/Tags for minecraft:block
+// 1.21	2025-07-27T17:25:54.2241837	WilderWorld/Tags for minecraft:block
 6c7e3d689b8a43a826c782974190103f87cd0336 data\minecraft\tags\block\leaves.json
 142989f7322d0e936702d226e9608491426ed9ca data\minecraft\tags\block\wooden_fences.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\block\walls.json
@@ -6,7 +6,7 @@
 b58489bd669cd7fa984dd1edf748c12fb928fe9c data\minecraft\tags\block\needs_diamond_tool.json
 a249c46329a41538f49a564e1f14338aaf1be5a0 data\minecraft\tags\block\wilderworld.json
 6c7e3d689b8a43a826c782974190103f87cd0336 data\minecraft\tags\block\planks.json
-38862bab7fb3b7b2faaec4682f725915fbb99497 data\minecraft\tags\block\needs_iron_tool.json
 f0044fcce92eb03f2284de8a74af4e8362ab2684 data\minecraft\tags\block\fence_gates.json
 be9ac4e23c270ee01724f47ba2aa4632a32de133 data\minecraft\tags\block\logs_that_burn.json
+38862bab7fb3b7b2faaec4682f725915fbb99497 data\minecraft\tags\block\needs_iron_tool.json
 ceafa6bf2028722ed0fa64185033ee99b97b88a8 data\minecraft\tags\block\mineable\axe.json

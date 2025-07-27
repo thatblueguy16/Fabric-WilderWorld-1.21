@@ -3,6 +3,8 @@ package net.thatblueguy16.wilderworld.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -145,6 +147,9 @@ public static final Block RAW_TORMENTIUM_BLOCK = registerBlock("raw_tormentium_b
                     .strength(1f)
                     .sounds(BlockSoundGroup.FROGLIGHT)
                     .luminance(state ->state.get(LumenPodBlock.CLICKED) ? 15 :0 )));
+
+    public static final PlantBlock BROMELIAD = (PlantBlock) registerBlock("bromeliad",
+            new FlowerBlock(StatusEffects.LUCK, 20, AbstractBlock.Settings.copy(POPPY)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
