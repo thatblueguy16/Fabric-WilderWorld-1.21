@@ -94,6 +94,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SAPPHIRE_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.WORLD_SMITHING_TEMPLATE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.CYPRESS_SAPLING, Models.GENERATED);
+
 
 
     }

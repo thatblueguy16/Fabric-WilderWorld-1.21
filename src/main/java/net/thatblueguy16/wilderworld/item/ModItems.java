@@ -25,6 +25,7 @@ public class ModItems {
     public static final Item TORMENTIUM_INGOT = registerItem("tormentium_ingot", new Item(new Item.Settings()));
 
     public static final Item RAW_TORMENTIUM = registerItem("raw_tormentium", new Item(new Item.Settings()));
+    public static final Item CYPRESS_SAPLING = registerItem("cypress_sapling", new Item(new Item.Settings()));
     public static final Item GLOWROOT_BULB = registerItem("glowroot_bulb", new Item(new Item.Settings().food(ModFoodComponents.GLOWROOT_BULB)){
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -92,6 +93,7 @@ public static final Item SAPPHIRE_HORSE_ARMOR = registerItem("sapphire_horse_arm
 
 public static final Item WORLD_SMITHING_TEMPLATE = registerItem("world_smithing_template",
         SmithingTemplateItem.of(Identifier.of(WilderWorld.MOD_ID, "world"), FeatureFlags.VANILLA));
+
 
 
 
