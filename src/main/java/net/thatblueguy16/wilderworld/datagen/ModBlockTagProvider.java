@@ -50,7 +50,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CYPRESS_STAIR)
                 .add(ModBlocks.CYPRESS_SLAB)
 
-                .add(ModBlocks.CYPRESS_PLANKS);
+                .add(ModBlocks.CYPRESS_PLANKS)
+                .add(ModBlocks.FERRUSK_LOG)
+
+                .add(ModBlocks.FERRUSK_WOOD)
+                .add(ModBlocks.DEAD_FERRUSK_LOG)
+
+                .add(ModBlocks.DEAD_FERRUSK_WOOD);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.CYPRESS_FENCE);
 
@@ -64,12 +70,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CYPRESS_LOG)
                 .add(ModBlocks.STRIPPED_CYPRESS_LOG)
                 .add(ModBlocks.STRIPPED_CYPRESS_WOOD)
-                .add(ModBlocks.CYPRESS_WOOD);
+                .add(ModBlocks.CYPRESS_WOOD)
+                .add(ModBlocks.FERRUSK_LOG)
+                .add(ModBlocks.FERRUSK_WOOD)
+                .add(ModBlocks.DEAD_FERRUSK_LOG)
+                .add(ModBlocks.DEAD_FERRUSK_WOOD);
 
-        getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.CYPRESS_LEAVES);
+        getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.CYPRESS_PLANKS);
 
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_TORMENTIUM_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
 
 
     }

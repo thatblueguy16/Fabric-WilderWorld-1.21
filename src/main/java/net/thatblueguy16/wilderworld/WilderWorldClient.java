@@ -10,8 +10,19 @@ public class WilderWorldClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CYPRESS_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CYPRESS_TRAPDOOR, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CYPRESS_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CYPRESS_SAPLING, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BROMELIAD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GLOWROOT, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPORECAP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FERRUSK_SAPLING, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_FERRUSK_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_FERRUSK_LEAVES, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FERRUSK_LEAVES, RenderLayer.getCutout());
     }
 }

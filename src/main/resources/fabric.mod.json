@@ -18,12 +18,16 @@
 		"main": [
 			"net.thatblueguy16.wilderworld.WilderWorld"
 		],
+		"terrablender": [
+
+		],
 		"fabric-datagen": [
 			"net.thatblueguy16.wilderworld.WilderWorldDataGenerator"
 		],
 		"client": [
 			"net.thatblueguy16.wilderworld.WilderWorldClient"
 		]
+
 	},
 	"mixins": [
 		"wilderworld.mixins.json"

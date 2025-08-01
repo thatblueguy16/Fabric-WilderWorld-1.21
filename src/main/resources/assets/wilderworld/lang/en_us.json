@@ -70,8 +70,26 @@
   "block.wilderworld.deepslate_tormentium_ore": "Deepslate Tormentium Ore",
   "block.wilderworld.magic_block": "Magic Block",
 
-  "block.wilderworld.dried_peat_block": "Dried Peat Block",
+  "block.wilderworld.dried_peat_block": "Dried Peat Moss Block",
   "block.wilderworld.lumenpod_block": "LumenPod Block",
+
+  "block.wilderworld.sporecap": "Sporecap Mushroom",
+  "block.wilderworld.peat_block": "Peat Moss Block",
+
+  "block.wilderworld.glowroot": "Glowroot Crop",
+  "block.wilderworld.sporecap_block": "Sporecap Block",
+
+  "block.wilderworld.dead_ferrusk_log": "Dead Ferrusk Log",
+  "block.wilderworld.dead_ferrusk_wood": "Dead Ferrusk Wood",
+
+  "block.wilderworld.ferrusk_wood": "Ferrusk Wood",
+  "block.wilderworld.ferrusk_log": "Ferrusk Log",
+
+  "block.wilderworld.ferrusk_leaves": "Ferrusk Leaves",
+  "block.wilderworld.dead_ferrusk_leaves": "Dead Ferrusk Leaves",
+
+  "block.wilderworld.dead_ferrusk_sapling": "Dead Ferrusk Sapling",
+  "block.wilderworld.ferrusk_sapling": "Ferrusk Sapling",
 
 
 

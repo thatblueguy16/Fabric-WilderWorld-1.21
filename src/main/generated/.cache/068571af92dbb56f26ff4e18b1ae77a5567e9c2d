@@ -1,14 +1,17 @@
-// 1.21	2025-07-27T17:25:54.2271823	WilderWorld/Block Loot Tables
+// 1.21	2025-08-01T13:08:21.789347	WilderWorld/Block Loot Tables
 65eab0493f319c4eea01e51ff1a01430b62df3da data\wilderworld\loot_table\blocks\cypress_stair.json
 096d5640dd251babce0177958f249d5edfeb739a data\wilderworld\loot_table\blocks\cypress_door.json
+b13a4643e326c98cd6a69cdf6392c25a8588caa3 data\wilderworld\loot_table\blocks\peat_block.json
 8ba47e6899356f5b6f2053e711a7554d11780a31 data\wilderworld\loot_table\blocks\dried_peat_block.json
 a4dac522eded0906caf090f08b1b2a930bab5e1d data\wilderworld\loot_table\blocks\cypress_trapdoor.json
 5b32f1da82e32117a126e9788f07f11abbe36768 data\wilderworld\loot_table\blocks\cypress_slab.json
 92937eda59f7dd481f796a6ef16a274ad9161e7e data\wilderworld\loot_table\blocks\stripped_cypress_wood.json
 22ac4b994706c8c3915944646bd6216ad4f06d2c data\wilderworld\loot_table\blocks\tormentium_ore.json
 d9041cdaa8f9abaded6e8e16dfe3f1bd6e2f43d0 data\wilderworld\loot_table\blocks\sapphire_block.json
+fbb0f45a2eb214a7c03f602b0d2f972a10bdb452 data\wilderworld\loot_table\blocks\glowroot.json
 5dbf9edf4b4a6469925323186033fe76566d27eb data\wilderworld\loot_table\blocks\cypress_wood.json
 2c241e71f1f0b7df75b93dc01f7a7e1299119d42 data\wilderworld\loot_table\blocks\cypress_pressure_plate.json
+7950cb17d7575c5e11549bfbd1196a546bbad506 data\wilderworld\loot_table\blocks\sporecap_block.json
 63b72b6f0be8f9724af7697fdae4d7bcf91cf9a8 data\wilderworld\loot_table\blocks\deepslate_sapphire_ore.json
 6b501a9aa14d1117162716d8c498238292afd74c data\wilderworld\loot_table\blocks\cypress_fence.json
 58d480d17e4cdcaa93edfe78e43223af81c5fbb4 data\wilderworld\loot_table\blocks\raw_tormentium_block.json
@@ -24,3 +27,4 @@ ce1ccce75e3e4a157011c84bd5e0e54464fd4618 data\wilderworld\loot_table\blocks\sapp
 7c25a15887764b262b60b7c4280adee32d7e36d8 data\wilderworld\loot_table\blocks\cypress_fence_gate.json
 226119c1062880e49a2286a0a61f49746ddc54cb data\wilderworld\loot_table\blocks\magic_block.json
 098e73fa3894f0e989c84333f25501e3286135cb data\wilderworld\loot_table\blocks\cypress_log.json
+b34b16049b162626fa323ae5f160629fe487ae02 data\wilderworld\loot_table\blocks\sporecap.json

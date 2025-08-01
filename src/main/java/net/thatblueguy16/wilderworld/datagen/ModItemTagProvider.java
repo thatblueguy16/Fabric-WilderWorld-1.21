@@ -47,7 +47,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.CYPRESS_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_CYPRESS_LOG.asItem())
                 .add(ModBlocks.CYPRESS_LOG.asItem())
-                .add(ModBlocks.STRIPPED_CYPRESS_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_CYPRESS_WOOD.asItem())
+                .add(ModBlocks.FERRUSK_WOOD.asItem())
+                .add(ModBlocks.FERRUSK_LOG.asItem())
+                .add(ModBlocks.DEAD_FERRUSK_LOG.asItem())
+                .add(ModBlocks.DEAD_FERRUSK_WOOD.asItem());
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.CYPRESS_PLANKS.asItem());

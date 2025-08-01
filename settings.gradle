@@ -4,6 +4,14 @@ pluginManagement {
 			name = 'Fabric'
 			url = 'https://maven.fabricmc.net/'
 		}
+		maven {
+			name = "Modrinth"
+			url = "https://api.modrinth.com/maven"
+		}
+		maven {
+			name = "TerraBlenderAPI"
+			url = "https://github.com/Glitchfiend/TerraBlender"
+		}
 		mavenCentral()
 		gradlePluginPortal()
 	}

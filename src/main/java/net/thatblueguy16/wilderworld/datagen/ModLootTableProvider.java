@@ -6,15 +6,21 @@ import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
+import net.thatblueguy16.wilderworld.block.custom.GlowRootCrop;
 import net.thatblueguy16.wilderworld.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -57,6 +63,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BROMELIAD);
 
         addDrop(ModBlocks.CYPRESS_SAPLING);
+        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.GLOWROOT)
+                .properties(StatePredicate.Builder.create().exactMatch(GlowRootCrop.AGE, GlowRootCrop.MAX_AGE));
+        this.addDrop(ModBlocks.GLOWROOT, this.cropDrops(ModBlocks.GLOWROOT, ModItems.GLOWROOT_BULB, ModItems.GLOWROOT_BULB, builder2));
 
 
         addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));
@@ -64,6 +73,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.TORMENTIUM_ORE, oreDrops(ModBlocks.TORMENTIUM_ORE, ModItems.RAW_TORMENTIUM));
         addDrop(ModBlocks.DEEPSLATE_TORMENTIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_TORMENTIUM_ORE, ModItems.RAW_TORMENTIUM,1,1));
+
+        addDrop(ModBlocks.SPORECAP);
+        addDrop(ModBlocks.PEAT_BLOCK);
+
+        addDrop(ModBlocks.SPORECAP_BLOCK, mushroomBlockDrops(ModBlocks.SPORECAP_BLOCK, ModBlocks.SPORECAP));
 
     }
 

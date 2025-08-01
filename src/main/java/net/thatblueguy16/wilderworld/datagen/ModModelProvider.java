@@ -6,6 +6,7 @@ import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
+import net.thatblueguy16.wilderworld.block.custom.GlowRootCrop;
 import net.thatblueguy16.wilderworld.block.custom.LumenPodBlock;
 import net.thatblueguy16.wilderworld.item.ModItems;
 
@@ -55,11 +56,28 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DRIED_PEAT_BLOCK);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.SPORECAP, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PEAT_BLOCK);
+        blockStateModelGenerator.registerCrop(ModBlocks.GLOWROOT, GlowRootCrop.AGE, 0,1,2,3);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SPORECAP_BLOCK);
         Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.LUMENPOD_BLOCK, blockStateModelGenerator.modelCollector);
         Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.LUMENPOD_BLOCK, "_on", Models.CUBE_ALL, TextureMap::all);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.LUMENPOD_BLOCK)
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(LumenPodBlock.CLICKED, lampOnIdentifier, lampOffIdentifier)));
+
+        blockStateModelGenerator.registerLog(ModBlocks.FERRUSK_LOG).log(ModBlocks.FERRUSK_LOG);
+        blockStateModelGenerator.registerLog(ModBlocks.DEAD_FERRUSK_LOG).log(ModBlocks.DEAD_FERRUSK_LOG);
+
+        blockStateModelGenerator.registerLog(ModBlocks.FERRUSK_WOOD).wood(ModBlocks.FERRUSK_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.DEAD_FERRUSK_WOOD).wood(ModBlocks.DEAD_FERRUSK_WOOD);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.FERRUSK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.DEAD_FERRUSK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FERRUSK_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEAD_FERRUSK_LEAVES);
 
 
     }
@@ -73,7 +91,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_TORMENTIUM, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.TORMENTIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GLOWROOT_BULB, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.MASHED_GLOWROOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.PEAT_CLUMP, Models.GENERATED);

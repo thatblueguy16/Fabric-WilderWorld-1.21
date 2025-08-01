@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_moss_block": {
+    "has_peat_block": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:moss_block"
+            "items": "wilderworld:peat_block"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_moss_block"
+      "has_peat_block"
     ]
   ],
   "rewards": {

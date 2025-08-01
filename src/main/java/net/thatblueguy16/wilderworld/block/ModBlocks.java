@@ -14,6 +14,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.thatblueguy16.wilderworld.WilderWorld;
+import net.thatblueguy16.wilderworld.block.custom.GlowRootCrop;
 import net.thatblueguy16.wilderworld.block.custom.LumenPodBlock;
 import net.thatblueguy16.wilderworld.block.custom.MagicBlock;
 import net.thatblueguy16.wilderworld.world.tree.ModSaplingGenerator;
@@ -53,10 +54,15 @@ public static final Block STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypres
     public static final Block CYPRESS_PLANKS = registerBlock("cypress_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
     public static final Block CYPRESS_LEAVES = registerBlock("cypress_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(OAK_LEAVES)));
+            new LeavesBlock(AbstractBlock.Settings.copy(OAK_LEAVES)
+                    .nonOpaque()
+                    .ticksRandomly()
+                    .strength(0.2f)
+                    .mapColor(MapColor.DARK_GREEN)
+                    .sounds(BlockSoundGroup.AZALEA_LEAVES)));
 
 public static final Block CYPRESS_SAPLING = registerBlock("cypress_sapling",
-            new SaplingBlock(ModSaplingGenerator.CYPRESS, AbstractBlock.Settings.copy(OAK_SAPLING)));
+        new SaplingBlock(ModSaplingGenerator.CYPRESS, AbstractBlock.Settings.copy(OAK_SAPLING)));
 
     public static final Block CYPRESS_STAIR = registerBlock("cypress_stair",
             new StairsBlock(ModBlocks.CYPRESS_PLANKS.getDefaultState(), AbstractBlock.Settings.create()
@@ -149,10 +155,68 @@ public static final Block RAW_TORMENTIUM_BLOCK = registerBlock("raw_tormentium_b
                     .luminance(state ->state.get(LumenPodBlock.CLICKED) ? 15 :0 )));
 
     public static final PlantBlock BROMELIAD = (PlantBlock) registerBlock("bromeliad",
-            new FlowerBlock(StatusEffects.LUCK, 20, AbstractBlock.Settings.copy(POPPY)));
+            new FlowerBlock(StatusEffects.LUCK, 20, AbstractBlock.Settings.copy(POPPY)
+                    .nonOpaque()));
+
+    public static final Block GLOWROOT = registerBlockWithoutBlockItem("glowroot",
+            new GlowRootCrop(AbstractBlock.Settings.copy(POTATOES)
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .nonOpaque()
+                    .sounds(BlockSoundGroup.CROP)));
+
+    public static final Block SPORECAP = registerBlock("sporecap",
+            new SaplingBlock(ModSaplingGenerator.SPORECAP,AbstractBlock.Settings.copy(BROWN_MUSHROOM)));
+
+
+    public static final Block PEAT_BLOCK = registerBlock("peat_block",
+            new PillarBlock(AbstractBlock.Settings.create()
+                    .strength(1f)
+                    .sounds(BlockSoundGroup.MOSS_BLOCK)
+                    .burnable()));
+
+    public static final Block SPORECAP_BLOCK = registerBlock("sporecap_block",
+            new MushroomBlock(AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK)
+                    .sounds(BlockSoundGroup.FUNGUS)));
+
+    public static final Block FERRUSK_LOG = registerBlock("ferrusk_log",
+            new PillarBlock(AbstractBlock.Settings.copy(OAK_LOG)));
+
+    public static final Block DEAD_FERRUSK_LOG = registerBlock("dead_ferrusk_log",
+            new PillarBlock(AbstractBlock.Settings.copy(OAK_LOG)));
+
+    public static final Block FERRUSK_WOOD = registerBlock("ferrusk_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(OAK_WOOD)));
+
+    public static final Block DEAD_FERRUSK_WOOD = registerBlock("dead_ferrusk_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(OAK_WOOD)));
+
+    public static final Block FERRUSK_SAPLING = registerBlock("ferrusk_sapling",
+            new SaplingBlock(ModSaplingGenerator.FERRUSK, AbstractBlock.Settings.copy(OAK_SAPLING)));
+
+    public static final Block DEAD_FERRUSK_SAPLING = registerBlock("dead_ferrusk_sapling",
+        new SaplingBlock(ModSaplingGenerator.DEAD_FERRUSK, AbstractBlock.Settings.copy(OAK_SAPLING)));
+
+    public static final Block FERRUSK_LEAVES = registerBlock("ferrusk_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(OAK_LEAVES)
+                    .nonOpaque()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES)
+                    .burnable()));
+
+    public static final Block DEAD_FERRUSK_LEAVES = registerBlock("dead_ferrusk_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(OAK_LEAVES)
+                    .nonOpaque()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES)
+                    .burnable()));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(WilderWorld.MOD_ID, name), block);
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(WilderWorld.MOD_ID, name), block);
     }
 

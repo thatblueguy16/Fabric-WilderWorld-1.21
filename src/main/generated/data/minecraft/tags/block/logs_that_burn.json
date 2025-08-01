@@ -3,6 +3,10 @@
     "wilderworld:cypress_log",
     "wilderworld:stripped_cypress_log",
     "wilderworld:stripped_cypress_wood",
-    "wilderworld:cypress_wood"
+    "wilderworld:cypress_wood",
+    "wilderworld:ferrusk_log",
+    "wilderworld:ferrusk_wood",
+    "wilderworld:dead_ferrusk_log",
+    "wilderworld:dead_ferrusk_wood"
   ]
 }

@@ -43,7 +43,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SAPPHIRE,RecipeCategory.DECORATIONS, ModBlocks.SAPPHIRE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TORMENTIUM_INGOT,RecipeCategory.DECORATIONS, ModBlocks.TORMENTIUM_BLOCK);
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.PEAT_CLUMP,RecipeCategory.MISC, Blocks.MOSS_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.PEAT_CLUMP,RecipeCategory.MISC, ModBlocks.PEAT_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.DRIED_PEAT_CLUMP,RecipeCategory.MISC, ModBlocks.DRIED_PEAT_BLOCK);
+
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TORMENTIUM,RecipeCategory.DECORATIONS, ModBlocks.RAW_TORMENTIUM_BLOCK);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STRING, 2)
@@ -124,16 +126,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('x', ModItems.PEAT_CLUMP)
                 .criterion("has_peat_clump", conditionsFromItem(ModItems.PEAT_CLUMP))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "moss_carpet_from_peat_clump"));
-
-    ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DRIED_PEAT_BLOCK, 1)
-                .pattern("xxx")
-                .pattern("rrr")
-                .pattern("xxx")
-                .input('x', ModItems.DRIED_PEAT_CLUMP)
-                .input('r', ModItems.PLANT_FIBER)
-                .criterion("has_dried_peat_clump", conditionsFromItem(ModItems.DRIED_PEAT_CLUMP))
-                .criterion("has_plant_fiber", conditionsFromItem(ModItems.PLANT_FIBER))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dried_peat_block_recipe"));
 
 ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_SWORD, 1)
                 .pattern(" x ")

@@ -10,6 +10,8 @@ import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.thatblueguy16.wilderworld.WilderWorld;
+import net.thatblueguy16.wilderworld.block.ModBlocks;
+import net.thatblueguy16.wilderworld.block.custom.GlowRootCrop;
 import net.thatblueguy16.wilderworld.item.custom.ChiselItem;
 import net.thatblueguy16.wilderworld.item.custom.HammerItem;
 import net.thatblueguy16.wilderworld.item.custom.LanternItem;
@@ -25,13 +27,9 @@ public class ModItems {
     public static final Item TORMENTIUM_INGOT = registerItem("tormentium_ingot", new Item(new Item.Settings()));
 
     public static final Item RAW_TORMENTIUM = registerItem("raw_tormentium", new Item(new Item.Settings()));
-    public static final Item GLOWROOT_BULB = registerItem("glowroot_bulb", new Item(new Item.Settings().food(ModFoodComponents.GLOWROOT_BULB)){
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("tooltip.wilderworld.glowroot_bulb.tooltip"));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
-    });
+    public static final Item GLOWROOT_BULB = registerItem("glowroot_bulb",
+            new AliasedBlockItem(ModBlocks.GLOWROOT, new Item.Settings().food(ModFoodComponents.GLOWROOT_BULB)) {
+            });
 
     public static final Item MASHED_GLOWROOT = registerItem("mashed_glowroot", new Item(new Item.Settings().food(ModFoodComponents.MASHED_GLOWROOT)){
         @Override
@@ -92,9 +90,6 @@ public static final Item SAPPHIRE_HORSE_ARMOR = registerItem("sapphire_horse_arm
 
 public static final Item WORLD_SMITHING_TEMPLATE = registerItem("world_smithing_template",
         SmithingTemplateItem.of(Identifier.of(WilderWorld.MOD_ID, "world"), FeatureFlags.VANILLA));
-
-
-
 
 
     private static Item registerItem(String name, Item item) {

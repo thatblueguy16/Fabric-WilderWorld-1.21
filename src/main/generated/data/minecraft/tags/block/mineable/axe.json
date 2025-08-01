@@ -8,6 +8,10 @@
     "wilderworld:cypress_trapdoor",
     "wilderworld:cypress_stair",
     "wilderworld:cypress_slab",
-    "wilderworld:cypress_planks"
+    "wilderworld:cypress_planks",
+    "wilderworld:ferrusk_log",
+    "wilderworld:ferrusk_wood",
+    "wilderworld:dead_ferrusk_log",
+    "wilderworld:dead_ferrusk_wood"
   ]
 }
