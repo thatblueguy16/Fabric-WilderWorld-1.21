@@ -42,6 +42,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> BIG_CYPRESS_KEY = registerKey("big_cypress_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BIG_SPORECAP_KEY = registerKey("big_sporecap_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEAD_FERRUSK_KEY = registerKey("dead_ferrusk_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DEAD_FERRUSK_KEY2 = registerKey("dead_ferrusk_key2");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FERRUSK_KEY = registerKey("ferrusk_key");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -117,13 +118,32 @@ public class ModConfiguredFeatures {
                 new TreeFeatureConfig.Builder(
                         BlockStateProvider.of(ModBlocks.DEAD_FERRUSK_LOG),
                         new LargeOakTrunkPlacer(
-                                7,
-                                2,
-                                1),
+                                9,
+                                3,
+                                4),
                         BlockStateProvider.of(Blocks.AIR),
                         new DarkOakFoliagePlacer(
-                                ConstantIntProvider.create(1),
+                                ConstantIntProvider.create(3),
                                 ConstantIntProvider.create(2)),
+                        new TwoLayersFeatureSize(
+                                3,
+                                0,
+                                2)
+                ).build());
+
+        register(context, DEAD_FERRUSK_KEY2, Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(ModBlocks.DEAD_FERRUSK_LOG),
+                        new LargeOakTrunkPlacer(
+                                9,
+                                3,
+                                4),
+                        BlockStateProvider.of(ModBlocks.DEAD_FERRUSK_LEAVES),
+                        new RandomSpreadFoliagePlacer(
+                                ConstantIntProvider.create(2),
+                                ConstantIntProvider.create(2),
+                                ConstantIntProvider.create(2),
+                                2),
                         new TwoLayersFeatureSize(
                                 3,
                                 0,
@@ -134,12 +154,12 @@ public class ModConfiguredFeatures {
                 new TreeFeatureConfig.Builder(
                         BlockStateProvider.of(ModBlocks.FERRUSK_LOG),
                         new LargeOakTrunkPlacer(
-                                7,
-                                2,
-                                1),
-                        BlockStateProvider.of(Blocks.MANGROVE_LEAVES),
+                                9,
+                                3,
+                                4),
+                        BlockStateProvider.of(ModBlocks.FERRUSK_LEAVES),
                         new JungleFoliagePlacer(
-                                ConstantIntProvider.create(1),
+                                ConstantIntProvider.create(3),
                                 ConstantIntProvider.create(2),
                                 2),
                         new TwoLayersFeatureSize(

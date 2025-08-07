@@ -52,6 +52,9 @@ public class ModItemGroups {
                         entries.add(ModItems.GLOWROOT_BULB);
                         entries.add(ModItems.MASHED_GLOWROOT);
 
+                        entries.add(ModBlocks.CATTAILS);
+                        entries.add(ModBlocks.TALL_CATTAILS);
+
                         entries.add(ModItems.PLANT_FIBER);
 
 
@@ -76,6 +79,32 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEAD_FERRUSK_LEAVES);
                         entries.add(ModBlocks.FERRUSK_LEAVES);
 
+                        entries.add(ModBlocks.FERRUSK_PLANKS);
+                        entries.add(ModBlocks.DEAD_FERRUSK_PLANKS);
+
+                        entries.add(ModBlocks.FERRUSK_STAIR);
+                        entries.add(ModBlocks.FERRUSK_TRAPDOOR);
+
+                        entries.add(ModBlocks.FERRUSK_SLAB);
+                        entries.add(ModBlocks.FERRUSK_BUTTON);
+
+                        entries.add(ModBlocks.FERRUSK_PRESSURE_PLATE);
+                        entries.add(ModBlocks.FERRUSK_FENCE);
+
+                        entries.add(ModBlocks.FERRUSK_FENCE_GATE);
+                        entries.add(ModBlocks.FERRUSK_DOOR);
+
+                        entries.add(ModBlocks.DEAD_FERRUSK_STAIR);
+                        entries.add(ModBlocks.DEAD_FERRUSK_TRAPDOOR);
+
+                        entries.add(ModBlocks.DEAD_FERRUSK_SLAB);
+                        entries.add(ModBlocks.DEAD_FERRUSK_BUTTON);
+
+                        entries.add(ModBlocks.DEAD_FERRUSK_PRESSURE_PLATE);
+                        entries.add(ModBlocks.DEAD_FERRUSK_FENCE);
+
+                        entries.add(ModBlocks.DEAD_FERRUSK_FENCE_GATE);
+                        entries.add(ModBlocks.DEAD_FERRUSK_DOOR);
 
                     }).build());
 

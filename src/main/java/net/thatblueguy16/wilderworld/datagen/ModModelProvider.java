@@ -34,7 +34,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(ModBlocks.CYPRESS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.BROMELIAD, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-
         cypressPlanksPool.stairs(ModBlocks.CYPRESS_STAIR);
         cypressPlanksPool.slab(ModBlocks.CYPRESS_SLAB);
 
@@ -78,6 +77,36 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FERRUSK_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEAD_FERRUSK_LEAVES);
+
+        BlockStateModelGenerator.BlockTexturePool deadferruskPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEAD_FERRUSK_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool ferruskPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FERRUSK_PLANKS);
+
+        ferruskPlanksPool.stairs(ModBlocks.FERRUSK_STAIR);
+        ferruskPlanksPool.slab(ModBlocks.FERRUSK_SLAB);
+
+        ferruskPlanksPool.button(ModBlocks.FERRUSK_BUTTON);
+        ferruskPlanksPool.pressurePlate(ModBlocks.FERRUSK_PRESSURE_PLATE);
+
+        ferruskPlanksPool.fence(ModBlocks.FERRUSK_FENCE );
+        ferruskPlanksPool.fenceGate(ModBlocks.FERRUSK_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.FERRUSK_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.FERRUSK_TRAPDOOR);
+
+        deadferruskPlanksPool.stairs(ModBlocks.DEAD_FERRUSK_STAIR);
+        deadferruskPlanksPool.slab(ModBlocks.DEAD_FERRUSK_SLAB);
+
+        deadferruskPlanksPool.button(ModBlocks.DEAD_FERRUSK_BUTTON);
+        deadferruskPlanksPool.pressurePlate(ModBlocks.DEAD_FERRUSK_PRESSURE_PLATE);
+
+        deadferruskPlanksPool.fence(ModBlocks.DEAD_FERRUSK_FENCE );
+        deadferruskPlanksPool.fenceGate(ModBlocks.DEAD_FERRUSK_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.DEAD_FERRUSK_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.DEAD_FERRUSK_TRAPDOOR);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.CATTAILS, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.TALL_CATTAILS, BlockStateModelGenerator.TintType.NOT_TINTED);
 
 
     }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "wilderworld:block/peat_block",
+    "end": "wilderworld:block/peat_block_top"
+  }
+}

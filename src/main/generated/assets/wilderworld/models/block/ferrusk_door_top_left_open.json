@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "wilderworld:block/ferrusk_door_bottom",
+    "top": "wilderworld:block/ferrusk_door_top"
+  }
+}

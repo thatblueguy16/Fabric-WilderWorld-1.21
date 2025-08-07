@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "wilderworld:block/glowroot_stage2"
+  }
+}

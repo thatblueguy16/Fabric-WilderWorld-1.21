@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "wilderworld:block/ferrusk_log_top",
+    "side": "wilderworld:block/ferrusk_log"
+  }
+}

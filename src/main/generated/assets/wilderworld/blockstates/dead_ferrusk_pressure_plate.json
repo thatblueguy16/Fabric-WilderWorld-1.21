@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "wilderworld:block/dead_ferrusk_pressure_plate"
+    },
+    "powered=true": {
+      "model": "wilderworld:block/dead_ferrusk_pressure_plate_down"
+    }
+  }
+}

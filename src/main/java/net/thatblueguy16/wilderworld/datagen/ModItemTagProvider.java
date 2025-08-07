@@ -54,7 +54,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.DEAD_FERRUSK_WOOD.asItem());
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
-                .add(ModBlocks.CYPRESS_PLANKS.asItem());
+                .add(ModBlocks.CYPRESS_PLANKS.asItem())
+                .add(ModBlocks.FERRUSK_PLANKS.asItem())
+                .add(ModBlocks.DEAD_FERRUSK_PLANKS.asItem());
 
 
     }

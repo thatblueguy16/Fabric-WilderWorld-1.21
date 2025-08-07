@@ -17,6 +17,7 @@ import net.thatblueguy16.wilderworld.WilderWorld;
 import net.thatblueguy16.wilderworld.block.custom.GlowRootCrop;
 import net.thatblueguy16.wilderworld.block.custom.LumenPodBlock;
 import net.thatblueguy16.wilderworld.block.custom.MagicBlock;
+import net.thatblueguy16.wilderworld.block.custom.TallCattailsPlant;
 import net.thatblueguy16.wilderworld.world.tree.ModSaplingGenerator;
 
 import static net.minecraft.block.Blocks.*;
@@ -46,9 +47,9 @@ public class ModBlocks {
 
     public static final Block CYPRESS_WOOD = registerBlock("cypress_wood",
             new PillarBlock(AbstractPlantStemBlock.Settings.copy(Blocks.OAK_WOOD)));
-public static final Block STRIPPED_CYPRESS_LOG = registerBlock("stripped_cypress_log",
+    public static final Block STRIPPED_CYPRESS_LOG = registerBlock("stripped_cypress_log",
             new PillarBlock(AbstractPlantStemBlock.Settings.copy(STRIPPED_OAK_LOG)));
-public static final Block STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypress_wood",
+    public static final Block STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypress_wood",
             new PillarBlock(AbstractPlantStemBlock.Settings.copy(STRIPPED_OAK_WOOD)));
 
     public static final Block CYPRESS_PLANKS = registerBlock("cypress_planks",
@@ -61,7 +62,7 @@ public static final Block STRIPPED_CYPRESS_WOOD = registerBlock("stripped_cypres
                     .mapColor(MapColor.DARK_GREEN)
                     .sounds(BlockSoundGroup.AZALEA_LEAVES)));
 
-public static final Block CYPRESS_SAPLING = registerBlock("cypress_sapling",
+    public static final Block CYPRESS_SAPLING = registerBlock("cypress_sapling",
         new SaplingBlock(ModSaplingGenerator.CYPRESS, AbstractBlock.Settings.copy(OAK_SAPLING)));
 
     public static final Block CYPRESS_STAIR = registerBlock("cypress_stair",
@@ -118,7 +119,7 @@ public static final Block CYPRESS_SAPLING = registerBlock("cypress_sapling",
                     .sounds(BlockSoundGroup.NETHERITE)
                     .requiresTool()));
 
-public static final Block RAW_TORMENTIUM_BLOCK = registerBlock("raw_tormentium_block",
+    public static final Block RAW_TORMENTIUM_BLOCK = registerBlock("raw_tormentium_block",
             new Block(AbstractBlock.Settings.create()
                     .strength(3f)
                     .sounds(BlockSoundGroup.NETHERITE)
@@ -209,6 +210,115 @@ public static final Block RAW_TORMENTIUM_BLOCK = registerBlock("raw_tormentium_b
                     .nonOpaque()
                     .sounds(BlockSoundGroup.CHERRY_LEAVES)
                     .burnable()));
+
+    public static final Block FERRUSK_PLANKS = registerBlock("ferrusk_planks",
+            new Block(AbstractBlock.Settings.copy(OAK_PLANKS)));
+
+    public static final Block DEAD_FERRUSK_PLANKS = registerBlock("dead_ferrusk_planks",
+            new Block(AbstractBlock.Settings.copy(OAK_PLANKS)));
+
+    public static final Block FERRUSK_STAIR = registerBlock("ferrusk_stair",
+            new StairsBlock(ModBlocks.FERRUSK_PLANKS.getDefaultState(), AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+    public static final Block FERRUSK_SLAB = registerBlock("ferrusk_slab",
+            new SlabBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+
+    public static final Block FERRUSK_BUTTON = registerBlock("ferrusk_button",
+            new ButtonBlock(BlockSetType.DARK_OAK, 40, AbstractBlock.Settings.create()
+                    .strength(1f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()
+                    .noCollision()));
+    public static final Block FERRUSK_PRESSURE_PLATE = registerBlock("ferrusk_pressure_plate",
+            new PressurePlateBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(1.5f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+
+    public static final Block FERRUSK_FENCE = registerBlock("ferrusk_fence",
+            new FenceBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+    public static final Block FERRUSK_FENCE_GATE = registerBlock("ferrusk_fence_gate",
+            new FenceGateBlock(WoodType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+
+    public static final Block FERRUSK_DOOR = registerBlock("ferrusk_door",
+            new DoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()
+                    .nonOpaque()));
+
+    public static final Block FERRUSK_TRAPDOOR = registerBlock("ferrusk_trapdoor",
+            new TrapdoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()
+                    .nonOpaque()));
+
+    public static final Block DEAD_FERRUSK_STAIR = registerBlock("dead_ferrusk_stair",
+            new StairsBlock(ModBlocks.DEAD_FERRUSK_PLANKS.getDefaultState(), AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+    public static final Block DEAD_FERRUSK_SLAB = registerBlock("dead_ferrusk_slab",
+            new SlabBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+
+    public static final Block DEAD_FERRUSK_BUTTON = registerBlock("dead_ferrusk_button",
+            new ButtonBlock(BlockSetType.DARK_OAK, 40, AbstractBlock.Settings.create()
+                    .strength(1f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()
+                    .noCollision()));
+    public static final Block DEAD_FERRUSK_PRESSURE_PLATE = registerBlock("dead_ferrusk_pressure_plate",
+            new PressurePlateBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(1.5f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+
+    public static final Block DEAD_FERRUSK_FENCE = registerBlock("dead_ferrusk_fence",
+            new FenceBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+    public static final Block DEAD_FERRUSK_FENCE_GATE = registerBlock("dead_ferrusk_fence_gate",
+            new FenceGateBlock(WoodType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+
+    public static final Block DEAD_FERRUSK_DOOR = registerBlock("dead_ferrusk_door",
+            new DoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()
+                    .nonOpaque()));
+
+    public static final Block DEAD_FERRUSK_TRAPDOOR = registerBlock("dead_ferrusk_trapdoor",
+            new TrapdoorBlock(BlockSetType.DARK_OAK, AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()
+                    .nonOpaque()));
+
+    public static final Block CATTAILS = registerBlock("cattails",
+            new ShortPlantBlock(AbstractBlock.Settings.copy(SHORT_GRASS)));
+
+public static final Block TALL_CATTAILS = registerBlock("tall_cattails",
+            new TallCattailsPlant(AbstractBlock.Settings.copy(SUNFLOWER)));
+
 
 
     private static Block registerBlock(String name, Block block) {

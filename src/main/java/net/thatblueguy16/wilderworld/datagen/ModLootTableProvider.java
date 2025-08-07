@@ -78,6 +78,39 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PEAT_BLOCK);
 
         addDrop(ModBlocks.SPORECAP_BLOCK, mushroomBlockDrops(ModBlocks.SPORECAP_BLOCK, ModBlocks.SPORECAP));
+        addDrop(ModBlocks.FERRUSK_PLANKS);
+
+        addDrop(ModBlocks.FERRUSK_SLAB, slabDrops(ModBlocks.FERRUSK_SLAB));
+        addDrop(ModBlocks.FERRUSK_STAIR);
+
+        addDrop(ModBlocks.FERRUSK_WOOD);
+        addDrop(ModBlocks.FERRUSK_BUTTON);
+
+        addDrop(ModBlocks.FERRUSK_PRESSURE_PLATE);
+        addDrop(ModBlocks.FERRUSK_FENCE);
+
+        addDrop(ModBlocks.FERRUSK_FENCE_GATE);
+        addDrop(ModBlocks.FERRUSK_DOOR, doorDrops(ModBlocks.FERRUSK_DOOR));
+
+        addDrop(ModBlocks.FERRUSK_TRAPDOOR);
+        addDrop(ModBlocks.DEAD_FERRUSK_PLANKS);
+
+        addDrop(ModBlocks.DEAD_FERRUSK_SLAB, slabDrops(ModBlocks.DEAD_FERRUSK_SLAB));
+        addDrop(ModBlocks.FERRUSK_STAIR);
+
+        addDrop(ModBlocks.DEAD_FERRUSK_WOOD);
+        addDrop(ModBlocks.DEAD_FERRUSK_BUTTON);
+
+        addDrop(ModBlocks.DEAD_FERRUSK_PRESSURE_PLATE);
+        addDrop(ModBlocks.DEAD_FERRUSK_FENCE);
+
+        addDrop(ModBlocks.DEAD_FERRUSK_FENCE_GATE);
+        addDrop(ModBlocks.DEAD_FERRUSK_DOOR, doorDrops(ModBlocks.DEAD_FERRUSK_DOOR));
+
+        addDrop(ModBlocks.DEAD_FERRUSK_TRAPDOOR);
+        addDrop(ModBlocks.DEAD_FERRUSK_LOG);
+
+        addDrop(ModBlocks.FERRUSK_LOG);
 
     }
 

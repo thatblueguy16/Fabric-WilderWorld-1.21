@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "wilderworld:dried_peat_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "wilderworld:dried_peat_clump"
+  }
+}

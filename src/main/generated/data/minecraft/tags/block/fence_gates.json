@@ -1,5 +1,7 @@
 {
   "values": [
-    "wilderworld:cypress_fence_gate"
+    "wilderworld:cypress_fence_gate",
+    "wilderworld:ferrusk_fence_gate",
+    "wilderworld:dead_ferrusk_fence_gate"
   ]
 }

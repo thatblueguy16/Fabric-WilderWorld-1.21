@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wilderworld:block/ferrusk_slab"
+    },
+    "type=double": {
+      "model": "wilderworld:block/ferrusk_planks"
+    },
+    "type=top": {
+      "model": "wilderworld:block/ferrusk_slab_top"
+    }
+  }
+}

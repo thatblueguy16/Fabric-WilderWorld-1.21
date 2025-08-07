@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "wilderworld:block/dead_ferrusk_planks",
+    "side": "wilderworld:block/dead_ferrusk_planks",
+    "top": "wilderworld:block/dead_ferrusk_planks"
+  }
+}

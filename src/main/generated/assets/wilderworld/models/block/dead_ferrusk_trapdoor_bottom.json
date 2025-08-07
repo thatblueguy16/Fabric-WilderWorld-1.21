@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_bottom",
+  "textures": {
+    "texture": "wilderworld:block/dead_ferrusk_trapdoor"
+  }
+}

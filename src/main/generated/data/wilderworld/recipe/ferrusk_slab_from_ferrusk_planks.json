@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": {
+      "item": "wilderworld:ferrusk_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "xxx"
+  ],
+  "result": {
+    "count": 6,
+    "id": "wilderworld:ferrusk_slab"
+  }
+}

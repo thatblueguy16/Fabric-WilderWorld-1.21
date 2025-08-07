@@ -48,7 +48,7 @@ public abstract class ModSaplingGenerator {
             Optional.empty(),
             Optional.empty(),
             Optional.of(ModConfiguredFeatures.DEAD_FERRUSK_KEY),
-            Optional.empty(),
+            Optional.of(ModConfiguredFeatures.DEAD_FERRUSK_KEY2),
             Optional.empty(),
             Optional.empty()
             );

@@ -50,7 +50,7 @@
   "block.wilderworld.cypress_log": "Cypress Log",
 
   "block.wilderworld.cypress_leaves": "Cypress Leaves",
-  "block.wilderworld.cypress_stair": "Cypress Stair",
+  "block.wilderworld.cypress_stair": "Cypress Stairs",
 
   "block.wilderworld.cypress_slab": "Cypress Slab",
   "block.wilderworld.cypress_button": "Cypress Button",
@@ -90,6 +90,36 @@
 
   "block.wilderworld.dead_ferrusk_sapling": "Dead Ferrusk Sapling",
   "block.wilderworld.ferrusk_sapling": "Ferrusk Sapling",
+
+  "block.wilderworld.ferrusk_planks": "Ferrusk Planks",
+  "block.wilderworld.dead_ferrusk_planks": "Dead Ferrusk Planks",
+
+  "block.wilderworld.dead_ferrusk_stair": "Dead Ferrusk Stairs",
+  "block.wilderworld.ferrusk_stair": "Ferrusk Stairs",
+
+  "block.wilderworld.dead_ferrusk_slab": "Dead Ferrusk Slab",
+  "block.wilderworld.ferrusk_slab": "Ferrusk Slab",
+
+  "block.wilderworld.dead_ferrusk_button": "Dead Ferrusk Button",
+  "block.wilderworld.ferrusk_button": "Ferrusk Button",
+
+  "block.wilderworld.dead_ferrusk_trapdoor": "Dead Ferrusk Trapdoor",
+  "block.wilderworld.ferrusk_trapdoor": "Ferrusk Trapdoor",
+
+  "block.wilderworld.dead_ferrusk_door": "Dead Ferrusk Door",
+  "block.wilderworld.ferrusk_door": "Ferrusk Door",
+
+  "block.wilderworld.dead_ferrusk_fence": "Dead Ferrusk Fence",
+  "block.wilderworld.ferrusk_fence": "Ferrusk Fence",
+
+  "block.wilderworld.dead_ferrusk_fence_gate": "Dead Ferrusk Fence Gate",
+  "block.wilderworld.ferrusk_fence_gate": "Ferrusk Fence Gate",
+
+  "block.wilderworld.dead_ferrusk_pressure_plate": "Dead Ferrusk Pressure Plate",
+  "block.wilderworld.ferrusk_pressure_plate": "Ferrusk Pressure Plate",
+
+  "block.wilderworld.cattails": "Cattails",
+  "block.wilderworld.tall_cattails": "Tall Cattails",
 
 
 

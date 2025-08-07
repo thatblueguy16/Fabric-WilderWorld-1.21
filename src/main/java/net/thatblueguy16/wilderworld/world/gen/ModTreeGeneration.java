@@ -20,7 +20,6 @@ public class ModTreeGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BIG_SPORECAP_PLACED_KEY);
 
-// Temporarily comment to test:
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SAVANNA),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.FERRUSK_PLACED_KEY);
 

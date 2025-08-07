@@ -233,6 +233,138 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_BOOTS,
                 .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_boots_recipe"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_DOOR, 3)
+                .pattern("xx ")
+                .pattern("xx ")
+                .pattern("xx ")
+                .input('x', ModBlocks.FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_door_from_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_STAIR, 4)
+                .pattern("x  ")
+                .pattern("xx ")
+                .pattern("xxx")
+                .input('x', ModBlocks.FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_stair_from_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_TRAPDOOR, 2)
+                .pattern("   ")
+                .pattern("xxx")
+                .pattern("xxx")
+                .input('x', ModBlocks.FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_trapdoor_from_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_SLAB, 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("xxx")
+                .input('x', ModBlocks.FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_slab_from_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_FENCE, 3)
+                .pattern("   ")
+                .pattern("xrx")
+                .pattern("xrx")
+                .input('x', ModBlocks.FERRUSK_PLANKS)
+                .input('r',Items.STICK)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_stick", conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_fence_from_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_FENCE_GATE, 1)
+                .pattern("   ")
+                .pattern("rxr")
+                .pattern("rxr")
+                .input('x', ModBlocks.FERRUSK_PLANKS)
+                .input('r',Items.STICK)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_stick", conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_fence_gate_from_ferrusk_planks"));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_PRESSURE_PLATE, 2)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("xx ")
+                .input('x', ModBlocks.FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_pressure_plate_from_ferrusk_planks"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_BUTTON, 1)
+                .input(ModBlocks.FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_button_from_ferrusk_planks"));
+
+ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_DOOR, 3)
+                .pattern("xx ")
+                .pattern("xx ")
+                .pattern("xx ")
+                .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_door_from_dead_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_STAIR, 4)
+                .pattern("x  ")
+                .pattern("xx ")
+                .pattern("xxx")
+                .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_stair_from_dead_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_TRAPDOOR, 2)
+                .pattern("   ")
+                .pattern("xxx")
+                .pattern("xxx")
+                .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_trapdoor_from_dead_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_SLAB, 6)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("xxx")
+                .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_slab_from_dead_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_FENCE, 3)
+                .pattern("   ")
+                .pattern("xrx")
+                .pattern("xrx")
+                .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
+                .input('r',Items.STICK)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_stick", conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_fence_from_dead_ferrusk_planks"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_FENCE_GATE, 1)
+                .pattern("   ")
+                .pattern("rxr")
+                .pattern("rxr")
+                .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
+                .input('r',Items.STICK)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_stick", conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_fence_gate_from_dead_ferrusk_planks"));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_PRESSURE_PLATE, 2)
+                .pattern("   ")
+                .pattern("   ")
+                .pattern("xx ")
+                .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_pressure_plate_from_dead_ferrusk_planks"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_BUTTON, 1)
+                .input(ModBlocks.DEAD_FERRUSK_PLANKS)
+                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_button_from_dead_ferrusk_planks"));
+
 offerSmithingTrimRecipe(exporter, ModItems.WORLD_SMITHING_TEMPLATE, Identifier.of(WilderWorld.MOD_ID, "world"));
 
 

@@ -12,6 +12,22 @@
     "wilderworld:ferrusk_log",
     "wilderworld:ferrusk_wood",
     "wilderworld:dead_ferrusk_log",
-    "wilderworld:dead_ferrusk_wood"
+    "wilderworld:dead_ferrusk_wood",
+    "wilderworld:dead_ferrusk_planks",
+    "wilderworld:ferrusk_planks",
+    "wilderworld:dead_ferrusk_stair",
+    "wilderworld:dead_ferrusk_slab",
+    "wilderworld:dead_ferrusk_fence",
+    "wilderworld:dead_ferrusk_fence_gate",
+    "wilderworld:dead_ferrusk_trapdoor",
+    "wilderworld:dead_ferrusk_door",
+    "wilderworld:dead_ferrusk_button",
+    "wilderworld:ferrusk_stair",
+    "wilderworld:ferrusk_slab",
+    "wilderworld:ferrusk_fence",
+    "wilderworld:ferrusk_fence_gate",
+    "wilderworld:ferrusk_trapdoor",
+    "wilderworld:ferrusk_door",
+    "wilderworld:ferrusk_button"
   ]
 }

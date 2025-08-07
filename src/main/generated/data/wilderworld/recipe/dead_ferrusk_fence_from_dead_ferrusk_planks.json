@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "x": {
+      "item": "wilderworld:dead_ferrusk_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "xrx",
+    "xrx"
+  ],
+  "result": {
+    "count": 3,
+    "id": "wilderworld:dead_ferrusk_fence"
+  }
+}
