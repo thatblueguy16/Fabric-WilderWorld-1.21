@@ -11,10 +11,10 @@ import net.thatblueguy16.wilderworld.WilderWorld;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
 
 public class ModItemGroups {
-    public static final ItemGroup MISTY_MIRE_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(WilderWorld.MOD_ID, "misty_mire"),
+    public static final ItemGroup ANCIENT_BOG_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(WilderWorld.MOD_ID, "ancient_bog"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.PEAT_CLUMP))
-                    .displayName(Text.translatable("itemgroup.wilderworld.misty_mire"))
+                    .displayName(Text.translatable("itemgroup.wilderworld.ancient_bog"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.CYPRESS_PLANKS);
                         entries.add(ModBlocks.CYPRESS_WOOD);
@@ -43,20 +43,32 @@ public class ModItemGroups {
                         entries.add(ModItems.DRIED_PEAT_CLUMP);
                         entries.add(ModBlocks.STRIPPED_CYPRESS_LOG);
 
-                        entries.add(ModBlocks.STRIPPED_CYPRESS_WOOD);
-                        entries.add(ModBlocks.BROMELIAD);
-
                         entries.add(ModBlocks.SPORECAP);
                         entries.add(ModBlocks.SPORECAP_BLOCK);
-
-                        entries.add(ModItems.GLOWROOT_BULB);
-                        entries.add(ModItems.MASHED_GLOWROOT);
 
                         entries.add(ModBlocks.CATTAILS);
                         entries.add(ModBlocks.TALL_CATTAILS);
 
                         entries.add(ModItems.PLANT_FIBER);
+                        entries.add(ModItems.LAVENDER_DYE);
 
+                        entries.add(ModBlocks.MILKWEED);
+                        entries.add(ModBlocks.MILKWEED_TEAL);
+
+                        entries.add(ModBlocks.MILKWEED_LAVENDER);
+                        entries.add(ModBlocks.MILKWEED_YELLOW);
+
+                        entries.add(ModBlocks.MILKWEED_BLUE);
+                        entries.add(ModBlocks.BOG_MAW);
+
+                        entries.add(ModBlocks.BOG_BULB);
+                        entries.add(ModItems.GLOWROOT);
+
+                        entries.add(ModBlocks.WILD_GLOWROOT);
+                        entries.add(ModBlocks.STRIPPED_CYPRESS_WOOD);
+
+                        entries.add(ModItems.SCUTTLE_TAIL_SPAWN_EGG);
+                        entries.add(ModItems.BOG_MAW_SPAWN_EGG);
 
 
 
@@ -72,9 +84,6 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.DEAD_FERRUSK_WOOD);
                         entries.add(ModBlocks.FERRUSK_WOOD);
-
-                        entries.add(ModBlocks.FERRUSK_SAPLING);
-                        entries.add(ModBlocks.DEAD_FERRUSK_SAPLING);
 
                         entries.add(ModBlocks.DEAD_FERRUSK_LEAVES);
                         entries.add(ModBlocks.FERRUSK_LEAVES);
@@ -105,6 +114,13 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.DEAD_FERRUSK_FENCE_GATE);
                         entries.add(ModBlocks.DEAD_FERRUSK_DOOR);
+
+                        entries.add(ModBlocks.STRIPPED_FERRUSK_LOG);
+                        entries.add(ModBlocks.STRIPPED_DEAD_FERRUSK_WOOD);
+
+                        entries.add(ModBlocks.STRIPPED_DEAD_FERRUSK_LOG);
+                        entries.add(ModBlocks.STRIPPED_FERRUSK_WOOD);
+
 
                     }).build());
 

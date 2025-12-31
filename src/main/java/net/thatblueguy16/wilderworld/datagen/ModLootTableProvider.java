@@ -6,21 +6,18 @@ import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
-import net.thatblueguy16.wilderworld.block.custom.GlowRootCrop;
+import net.thatblueguy16.wilderworld.block.custom.AncientBog.GlowRootCrop;
 import net.thatblueguy16.wilderworld.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -53,26 +50,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CYPRESS_DOOR, doorDrops(ModBlocks.CYPRESS_DOOR));
         addDrop(ModBlocks.CYPRESS_TRAPDOOR);
 
-        addDrop(ModBlocks.TORMENTIUM_BLOCK);
-        addDrop(ModBlocks.RAW_TORMENTIUM_BLOCK);
-
         addDrop(ModBlocks.DRIED_PEAT_BLOCK);
         addDrop(ModBlocks.MAGIC_BLOCK);
 
-        addDrop(ModBlocks.CYPRESS_LEAVES, leavesDrops(ModBlocks.CYPRESS_LEAVES, ModBlocks.CYPRESS_SAPLING, 0.625f));
-        addDrop(ModBlocks.BROMELIAD);
-
         addDrop(ModBlocks.CYPRESS_SAPLING);
-        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.GLOWROOT)
+        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.GLOWROOT_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(GlowRootCrop.AGE, GlowRootCrop.MAX_AGE));
-        this.addDrop(ModBlocks.GLOWROOT, this.cropDrops(ModBlocks.GLOWROOT, ModItems.GLOWROOT_BULB, ModItems.GLOWROOT_BULB, builder2));
-
-
-        addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));
-        addDrop(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, ModItems.SAPPHIRE,1,1));
-
-        addDrop(ModBlocks.TORMENTIUM_ORE, oreDrops(ModBlocks.TORMENTIUM_ORE, ModItems.RAW_TORMENTIUM));
-        addDrop(ModBlocks.DEEPSLATE_TORMENTIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_TORMENTIUM_ORE, ModItems.RAW_TORMENTIUM,1,1));
+        this.addDrop(ModBlocks.GLOWROOT_CROP, this.cropDrops(ModBlocks.GLOWROOT_CROP, ModItems.GLOWROOT, ModItems.GLOWROOT, builder2));
 
         addDrop(ModBlocks.SPORECAP);
         addDrop(ModBlocks.PEAT_BLOCK);
@@ -111,10 +95,35 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DEAD_FERRUSK_LOG);
 
         addDrop(ModBlocks.FERRUSK_LOG);
+        addDrop(ModBlocks.MILKWEED);
+
+        addDrop(ModBlocks.MILKWEED_TEAL);
+        addDrop(ModBlocks.MILKWEED_LAVENDER);
+
+        addDrop(ModBlocks.MILKWEED_YELLOW);
+        addDrop(ModBlocks.MILKWEED_BLUE);
+
+        addDrop(ModBlocks.BOG_MAW);
+        addDrop(ModBlocks.BOG_BULB);
+
+        addDrop(ModBlocks.CATTAILS);
+        addDrop(ModBlocks.TALL_CATTAILS);
+
+        addDrop(ModBlocks.WILD_GLOWROOT, dropslikeFern(ModBlocks.WILD_GLOWROOT, ModItems.GLOWROOT, 1, 1));
+        addDrop(ModBlocks.CYPRESS_LEAVES, leavesDrops(ModBlocks.CYPRESS_LEAVES, ModBlocks.CYPRESS_SAPLING, 0.625f));
+
+
 
     }
 
+
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
+        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+        return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
+                ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
+                .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+    }
+    public LootTable.Builder dropslikeFern(Block drop, Item item, float minDrops, float maxDrops) {
         RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
         return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
                 ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))

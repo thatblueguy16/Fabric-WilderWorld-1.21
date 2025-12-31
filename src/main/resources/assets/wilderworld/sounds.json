@@ -1,0 +1,21 @@
+{
+  "bog_maw_idle":{
+  "subtitle": "sounds.wilderworld.bog_maw_idle",
+    "sound": [
+      "wilderworld:bog_maw1"
+    ]
+},
+  "bog_maw_hurt":{
+  "subtitle": "sounds.wilderworld.bog_maw_hurt",
+    "sound": [
+      "wilderworld:bog_maw2"
+    ]
+},
+ "bog_maw_death":{
+  "subtitle": "sounds.wilderworld.bog_maw_death",
+    "sound": [
+      "wilderworld:bog_maw3"
+    ]
+}
+
+}

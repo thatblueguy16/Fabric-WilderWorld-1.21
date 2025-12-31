@@ -21,21 +21,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SAPPHIRE_ORE)
 
                 .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
-                .add(ModBlocks.DEEPSLATE_TORMENTIUM_ORE)
-
-                .add(ModBlocks.TORMENTIUM_ORE)
-                .add(ModBlocks.MAGIC_BLOCK);
-
+                .add(ModBlocks.MAGIC_BLOCK)
+        ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SAPPHIRE_ORE)
-                .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+                .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
+        ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.DEEPSLATE_TORMENTIUM_ORE)
-                .add(ModBlocks.TORMENTIUM_ORE)
-
-                .add(ModBlocks.MAGIC_BLOCK);
+                .add(ModBlocks.MAGIC_BLOCK)
+        ;
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.CYPRESS_LOG)
@@ -80,7 +76,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.FERRUSK_TRAPDOOR)
                 .add(ModBlocks.FERRUSK_DOOR)
 
-                .add(ModBlocks.FERRUSK_BUTTON);
+                .add(ModBlocks.FERRUSK_BUTTON)
+                .add(ModBlocks.STRIPPED_DEAD_FERRUSK_LOG)
+
+                .add(ModBlocks.STRIPPED_FERRUSK_LOG)
+                .add(ModBlocks.STRIPPED_DEAD_FERRUSK_WOOD)
+
+                .add(ModBlocks.STRIPPED_FERRUSK_WOOD)
+        ;
+
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.CYPRESS_FENCE)
@@ -90,13 +94,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.CYPRESS_FENCE_GATE)
                 .add(ModBlocks.FERRUSK_FENCE_GATE)
-                .add(ModBlocks.DEAD_FERRUSK_FENCE_GATE);
+                .add(ModBlocks.DEAD_FERRUSK_FENCE_GATE)
+        ;
 
-        getOrCreateTagBuilder(BlockTags.WALLS);
+        getOrCreateTagBuilder(BlockTags.WALLS)
+
+        ;
 
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.CYPRESS_LEAVES)
-                .add(ModBlocks.FERRUSK_LEAVES);
+                .add(ModBlocks.FERRUSK_LEAVES)
+                .add(ModBlocks.DEAD_FERRUSK_LEAVES)
+        ;
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CYPRESS_LOG)
@@ -106,15 +115,22 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.FERRUSK_LOG)
                 .add(ModBlocks.FERRUSK_WOOD)
                 .add(ModBlocks.DEAD_FERRUSK_LOG)
-                .add(ModBlocks.DEAD_FERRUSK_WOOD);
+                .add(ModBlocks.DEAD_FERRUSK_WOOD)
+                .add(ModBlocks.STRIPPED_DEAD_FERRUSK_LOG)
+                .add(ModBlocks.STRIPPED_FERRUSK_LOG)
+                .add(ModBlocks.STRIPPED_DEAD_FERRUSK_WOOD)
+                .add(ModBlocks.STRIPPED_FERRUSK_WOOD)
+        ;
 
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.CYPRESS_PLANKS)
                 .add(ModBlocks.FERRUSK_PLANKS)
-                .add(ModBlocks.DEAD_FERRUSK_PLANKS);
+                .add(ModBlocks.DEAD_FERRUSK_PLANKS)
+        ;
 
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_TORMENTIUM_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
+        ;
 
 
 

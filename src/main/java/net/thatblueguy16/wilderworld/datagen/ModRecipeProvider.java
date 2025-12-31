@@ -28,25 +28,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
         List<ItemConvertible> SAPPHIRE_SMELTABLES = List.of(ModBlocks.SAPPHIRE_ORE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
-        List<ItemConvertible> TORMENTIUM_SMELTABLES = List.of(ModBlocks.TORMENTIUM_ORE, ModBlocks.DEEPSLATE_TORMENTIUM_ORE, ModItems.RAW_TORMENTIUM);
         List<ItemConvertible> PEAT_SMELTABLES = List.of(ModItems.PEAT_CLUMP);
 
         offerSmelting(exporter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE, .25f, 200, "sapphire");
         offerBlasting(exporter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE, .25f, 100, "sapphire");
 
-        offerSmelting(exporter, TORMENTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.TORMENTIUM_INGOT, .5f, 200, "tormentium");
-        offerBlasting(exporter, TORMENTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.TORMENTIUM_INGOT, .5f, 200, "tormentium");
-
         offerSmelting(exporter, PEAT_SMELTABLES, RecipeCategory.MISC, ModItems.DRIED_PEAT_CLUMP, .25f, 100, "peat");
 
-
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SAPPHIRE,RecipeCategory.DECORATIONS, ModBlocks.SAPPHIRE_BLOCK);
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TORMENTIUM_INGOT,RecipeCategory.DECORATIONS, ModBlocks.TORMENTIUM_BLOCK);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.PEAT_CLUMP,RecipeCategory.MISC, ModBlocks.PEAT_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.DRIED_PEAT_CLUMP,RecipeCategory.MISC, ModBlocks.DRIED_PEAT_BLOCK);
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TORMENTIUM,RecipeCategory.DECORATIONS, ModBlocks.RAW_TORMENTIUM_BLOCK);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STRING, 2)
                 .input(ModItems.PLANT_FIBER)
@@ -127,118 +120,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion("has_peat_clump", conditionsFromItem(ModItems.PEAT_CLUMP))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "moss_carpet_from_peat_clump"));
 
-ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_SWORD, 1)
-                .pattern(" x ")
-                .pattern(" x ")
-                .pattern(" r ")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .input('r', Items.STICK)
-                .criterion("has+tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .criterion("has_stick", conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_sword_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TORMENTIUM_PICKAXE, 1)
-                .pattern("xxx")
-                .pattern(" r ")
-                .pattern(" r ")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .input('r', Items.STICK)
-                .criterion("has+tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .criterion("has_stick", conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_pickaxe_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_AXE, 1)
-                .pattern("xx ")
-                .pattern("xr ")
-                .pattern(" r ")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .input('r', Items.STICK)
-                .criterion("has+tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .criterion("has_stick", conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_axe_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TORMENTIUM_SHOVEL, 1)
-                .pattern(" x ")
-                .pattern(" r ")
-                .pattern(" r ")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .input('r', Items.STICK)
-                .criterion("has+tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .criterion("has_stick", conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_shovel_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TORMENTIUM_HOE, 1)
-                .pattern("xx ")
-                .pattern(" r ")
-                .pattern(" r ")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .input('r', Items.STICK)
-                .criterion("has+tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .criterion("has_stick", conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_hoe_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MISTCALL_LANTERN, 1)
-                .pattern("cxc")
-                .pattern("crc")
-                .pattern("cxc")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .input('r', ModBlocks.LUMENPOD_BLOCK)
-                .input('c', Items.COPPER_INGOT)
-                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .criterion("has_lumenpod_block", conditionsFromItem(ModBlocks.LUMENPOD_BLOCK))
-                .criterion("has_copper_ingot", conditionsFromItem(Items.COPPER_INGOT))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "mistcall_lantern_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TORMENTIUM_HAMMER, 1)
-                .pattern("xxx")
-                .pattern("xrx")
-                .pattern(" c ")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .input('r', Items.NETHERITE_INGOT)
-                .input('c', Items.STICK)
-                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .criterion("has_netherite_ingot", conditionsFromItem(Items.NETHERITE_INGOT))
-                .criterion("has_stick", conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_hammer_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_HELMET, 1)
-                .pattern("xxx")
-                .pattern("x x")
-                .pattern("   ")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_helmet_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_CHESTPLATE, 1)
-                .pattern("x x")
-                .pattern("xxx")
-                .pattern("xxx")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_chestplate_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_LEGGINGS, 1)
-                .pattern("xxx")
-                .pattern("x x")
-                .pattern("x x")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_leggings_recipe"));
-
-ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_BOOTS, 1)
-                .pattern("x x")
-                .pattern("x x")
-                .pattern("   ")
-                .input('x', ModItems.TORMENTIUM_INGOT)
-                .criterion("has_tormentium_ingot", conditionsFromItem(ModItems.TORMENTIUM_INGOT))
-                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "tormentium_boots_recipe"));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_DOOR, 3)
                 .pattern("xx ")
                 .pattern("xx ")
                 .pattern("xx ")
                 .input('x', ModBlocks.FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_ferrusk_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_door_from_ferrusk_planks"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_STAIR, 4)
@@ -246,7 +133,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_BOOTS,
                 .pattern("xx ")
                 .pattern("xxx")
                 .input('x', ModBlocks.FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_ferrusk_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_stair_from_ferrusk_planks"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_TRAPDOOR, 2)
@@ -254,7 +141,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_BOOTS,
                 .pattern("xxx")
                 .pattern("xxx")
                 .input('x', ModBlocks.FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_ferrusk_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_trapdoor_from_ferrusk_planks"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_SLAB, 6)
@@ -262,7 +149,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_BOOTS,
                 .pattern("   ")
                 .pattern("xxx")
                 .input('x', ModBlocks.FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_ferrusk_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_slab_from_ferrusk_planks"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_FENCE, 3)
@@ -271,7 +158,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_BOOTS,
                 .pattern("xrx")
                 .input('x', ModBlocks.FERRUSK_PLANKS)
                 .input('r',Items.STICK)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_ferrusk_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
                 .criterion("has_stick", conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_fence_from_ferrusk_planks"));
 
@@ -281,7 +168,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_BOOTS,
                 .pattern("rxr")
                 .input('x', ModBlocks.FERRUSK_PLANKS)
                 .input('r',Items.STICK)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_ferrusk_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
                 .criterion("has_stick", conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_fence_gate_from_ferrusk_planks"));
 
@@ -291,12 +178,12 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TORMENTIUM_BOOTS,
                 .pattern("   ")
                 .pattern("xx ")
                 .input('x', ModBlocks.FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_ferrusk_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_pressure_plate_from_ferrusk_planks"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FERRUSK_BUTTON, 1)
                 .input(ModBlocks.FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
+                .criterion("has_ferrusk_planks", conditionsFromItem(ModBlocks.FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "ferrusk_button_from_ferrusk_planks"));
 
 ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_DOOR, 3)
@@ -304,7 +191,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FE
                 .pattern("xx ")
                 .pattern("xx ")
                 .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_dead_ferrusk_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_door_from_dead_ferrusk_planks"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_STAIR, 4)
@@ -312,7 +199,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FE
                 .pattern("xx ")
                 .pattern("xxx")
                 .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_dead_ferrusk_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_stair_from_dead_ferrusk_planks"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_TRAPDOOR, 2)
@@ -320,7 +207,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FE
                 .pattern("xxx")
                 .pattern("xxx")
                 .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_dead_ferrusk_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_trapdoor_from_dead_ferrusk_planks"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_SLAB, 6)
@@ -328,7 +215,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FE
                 .pattern("   ")
                 .pattern("xxx")
                 .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_dead_ferrusk_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_slab_from_dead_ferrusk_planks"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_FENCE, 3)
@@ -337,7 +224,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FE
                 .pattern("xrx")
                 .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
                 .input('r',Items.STICK)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_dead_ferrusk_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
                 .criterion("has_stick", conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_fence_from_dead_ferrusk_planks"));
 
@@ -347,7 +234,7 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FE
                 .pattern("rxr")
                 .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
                 .input('r',Items.STICK)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_dead_ferrusk_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
                 .criterion("has_stick", conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_fence_gate_from_dead_ferrusk_planks"));
 
@@ -357,15 +244,40 @@ ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FE
                 .pattern("   ")
                 .pattern("xx ")
                 .input('x', ModBlocks.DEAD_FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_dead_ferrusk_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_pressure_plate_from_dead_ferrusk_planks"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEAD_FERRUSK_BUTTON, 1)
                 .input(ModBlocks.DEAD_FERRUSK_PLANKS)
-                .criterion("has_cypress_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
+                .criterion("has_dead_ferrusk_planks", conditionsFromItem(ModBlocks.DEAD_FERRUSK_PLANKS))
                 .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "dead_ferrusk_button_from_dead_ferrusk_planks"));
 
-offerSmithingTrimRecipe(exporter, ModItems.WORLD_SMITHING_TEMPLATE, Identifier.of(WilderWorld.MOD_ID, "world"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LAVENDER_DYE, 2)
+                .input(ModBlocks.MILKWEED_LAVENDER)
+                .criterion("has_milkweed_lavender", conditionsFromItem(ModBlocks.MILKWEED_LAVENDER))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "lavender_dye_from_milkweed_lavender"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE, 2)
+                .input(ModBlocks.MILKWEED_TEAL)
+                .criterion("has_milkweed_teal", conditionsFromItem(ModBlocks.MILKWEED_TEAL))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "teal_dye_from_milkweed_teal"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.YELLOW_DYE, 2)
+                .input(ModBlocks.MILKWEED_YELLOW)
+                .criterion("has_milkweed_yellow", conditionsFromItem(ModBlocks.MILKWEED_YELLOW))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "yellow_dye_from_milkweed_yellow"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.PINK_DYE, 2)
+                .input(ModBlocks.MILKWEED)
+                .criterion("has_milkweed", conditionsFromItem(ModBlocks.MILKWEED))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "pink_dye_from_milkweed"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.BLUE_DYE, 2)
+                .input(ModBlocks.MILKWEED_BLUE)
+                .criterion("has_milkweed_blue", conditionsFromItem(ModBlocks.MILKWEED_BLUE))
+                .offerTo(exporter, Identifier.of(WilderWorld.MOD_ID, "blue_dye_from_milkweed_blue"));
+
+
 
 
 

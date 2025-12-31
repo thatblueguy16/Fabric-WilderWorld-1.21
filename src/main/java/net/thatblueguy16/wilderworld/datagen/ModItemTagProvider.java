@@ -20,28 +20,24 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
                 .add(ModItems.SAPPHIRE);
 
-        getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.TORMENTIUM_SWORD);
-        getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.TORMENTIUM_PICKAXE);
-        getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.TORMENTIUM_AXE);
-        getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.TORMENTIUM_SHOVEL);
-        getOrCreateTagBuilder(ItemTags.HOES)
-                .add(ModItems.TORMENTIUM_HOE);
+        getOrCreateTagBuilder(ItemTags.SWORDS);
 
-        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.TORMENTIUM_HELMET)
-                .add(ModItems.TORMENTIUM_CHESTPLATE)
-                .add(ModItems.TORMENTIUM_LEGGINGS)
-                .add(ModItems.TORMENTIUM_BOOTS);
+        getOrCreateTagBuilder(ItemTags.PICKAXES);
+
+        getOrCreateTagBuilder(ItemTags.AXES);
+
+        getOrCreateTagBuilder(ItemTags.SHOVELS);
+
+        getOrCreateTagBuilder(ItemTags.HOES);
+
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR);
 
         getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.SAPPHIRE);
 
-        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
-                .add(ModItems.WORLD_SMITHING_TEMPLATE);
+        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES);
+
 
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CYPRESS_WOOD.asItem())
@@ -51,12 +47,18 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.FERRUSK_WOOD.asItem())
                 .add(ModBlocks.FERRUSK_LOG.asItem())
                 .add(ModBlocks.DEAD_FERRUSK_LOG.asItem())
-                .add(ModBlocks.DEAD_FERRUSK_WOOD.asItem());
+                .add(ModBlocks.DEAD_FERRUSK_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_DEAD_FERRUSK_LOG.asItem())
+                .add(ModBlocks.STRIPPED_FERRUSK_LOG.asItem())
+                .add(ModBlocks.STRIPPED_DEAD_FERRUSK_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_FERRUSK_WOOD.asItem());
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.CYPRESS_PLANKS.asItem())
                 .add(ModBlocks.FERRUSK_PLANKS.asItem())
                 .add(ModBlocks.DEAD_FERRUSK_PLANKS.asItem());
+
+
 
 
     }

@@ -12,19 +12,10 @@ public class ModTreeGeneration {
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CYPRESS_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CYPRESS2_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BIG_CYPRESS_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BIG_SPORECAP_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SAVANNA),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.FERRUSK_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SAVANNA),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DEAD_FERRUSK_PLACED_KEY);
 
 
     }

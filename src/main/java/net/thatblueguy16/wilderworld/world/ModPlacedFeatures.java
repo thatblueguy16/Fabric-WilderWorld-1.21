@@ -15,23 +15,15 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> CYPRESS_PLACED_KEY = registerKey("cypress_placed");
-    public static final RegistryKey<PlacedFeature> CYPRESS2_PLACED_KEY = registerKey("cypress2_placed");
     public static final RegistryKey<PlacedFeature> BIG_CYPRESS_PLACED_KEY = registerKey("big_cypress_placed");
     public static final RegistryKey<PlacedFeature> BIG_SPORECAP_PLACED_KEY = registerKey("big_sporecap_placed_key");
-    public static final RegistryKey<PlacedFeature> FERRUSK_PLACED_KEY = registerKey("ferrusk_placed_key");
-    public static final RegistryKey<PlacedFeature> DEAD_FERRUSK_PLACED_KEY = registerKey("dead_ferrusk_placed_key");
+    public static final RegistryKey<PlacedFeature> CATTAILS_PLACED_KEY = registerKey("cattails_placed_key");
 
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, CYPRESS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CYPRESS_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(2, 0.25f, 2),
-                        ModBlocks.CYPRESS_SAPLING
-                ));
-
-        register(context, CYPRESS2_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CYPRESS_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(2, 0.25f, 2),
                         ModBlocks.CYPRESS_SAPLING
@@ -49,18 +41,9 @@ public class ModPlacedFeatures {
                         ModBlocks.SPORECAP
                 ));
 
-        register(context, FERRUSK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FERRUSK_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(2, 0.1f, 2),
-                        ModBlocks.FERRUSK_SAPLING
-                ));
-
-        register(context, DEAD_FERRUSK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEAD_FERRUSK_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(2, 0.1f, 2),
-                        ModBlocks.DEAD_FERRUSK_SAPLING
-                ));
-
+        register(context, CATTAILS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CATTAILS_KEY),
+                VegetationPlacedFeatures.modifiers(
+                        3));
 
 
     }

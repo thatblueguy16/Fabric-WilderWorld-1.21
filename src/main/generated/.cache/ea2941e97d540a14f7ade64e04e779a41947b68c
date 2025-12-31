@@ -1,12 +1,12 @@
-// 1.21	2025-08-06T22:02:51.92935	WilderWorld/Tags for minecraft:block
-2943252395300ed36acc2c9275d437f891b85cb2 data\minecraft\tags\block\leaves.json
+// 1.21	2025-12-30T21:07:26.3253171	WilderWorld/Tags for minecraft:block
+41ded9747e882c9866f0470f995ca76f13171ee2 data\minecraft\tags\block\leaves.json
 583ec8a5ed9b6d0ff9e184cfb33ed9abc3040f7e data\minecraft\tags\block\wooden_fences.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\block\walls.json
-78aeda9fd6ca185d3db7441274e873ea771d0232 data\minecraft\tags\block\mineable\pickaxe.json
-b58489bd669cd7fa984dd1edf748c12fb928fe9c data\minecraft\tags\block\needs_diamond_tool.json
+d8b4795614eb3549ae1a92d04e5fecfcc84b4c29 data\minecraft\tags\block\mineable\pickaxe.json
+cb9d60d47ad95e40e8e60455abbf09422b94a78c data\minecraft\tags\block\needs_diamond_tool.json
 a249c46329a41538f49a564e1f14338aaf1be5a0 data\minecraft\tags\block\wilderworld.json
 af382c8800676e14f161cbe0fcc9f61d6cc66497 data\minecraft\tags\block\planks.json
-38862bab7fb3b7b2faaec4682f725915fbb99497 data\minecraft\tags\block\needs_iron_tool.json
 caba7817713141adfbfd8bceab709422e5af7429 data\minecraft\tags\block\fence_gates.json
-dfe70f760f95d27633ef9f3c51d1f465dd294a10 data\minecraft\tags\block\logs_that_burn.json
-834930a643066383b7c51b730628961da2d7357b data\minecraft\tags\block\mineable\axe.json
+565a2e87d67aa74ef3a74a5b46f425263543ba63 data\minecraft\tags\block\logs_that_burn.json
+38862bab7fb3b7b2faaec4682f725915fbb99497 data\minecraft\tags\block\needs_iron_tool.json
+092f8088434e60351bbd2828c7cbf5a12d4c4349 data\minecraft\tags\block\mineable\axe.json

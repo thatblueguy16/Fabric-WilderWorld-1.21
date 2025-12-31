@@ -1,12 +1,12 @@
-// 1.21	2025-08-06T22:02:51.9773224	WilderWorld/Tags for minecraft:item
+// 1.21	2025-12-30T21:07:26.3383116	WilderWorld/Tags for minecraft:item
 116cc750eaa32d42ba66f20307cf76a06c6eae82 data\minecraft\tags\item\wilderworld.json
-9811f2a3895bfaaccf8cd6e6f5d11b5c1d1a6529 data\minecraft\tags\item\shovels.json
-7e7c0212bed471c1568af8813bb61987706126c2 data\minecraft\tags\item\logs_that_burn.json
-b9cdea43abcd7720a7cfefaf6eed6b2fa50a00eb data\minecraft\tags\item\hoes.json
-eaf220bf2792cc8619375e7a3cb3d4b78eac254f data\minecraft\tags\item\trimmable_armor.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\item\shovels.json
+c783dda3b6eaf3fec0eefdd7c1e82300516668a2 data\minecraft\tags\item\logs_that_burn.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\item\hoes.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\item\trimmable_armor.json
 116cc750eaa32d42ba66f20307cf76a06c6eae82 data\minecraft\tags\item\trim_materials.json
-55afed48b720d6f8ee9001a6cce9041c75534a11 data\minecraft\tags\item\swords.json
-fb8cf9e8076349e7be615cd182edcad2aba63861 data\minecraft\tags\item\pickaxes.json
-039ce1e75b3f9a5e493732c3ad485494d703a5d0 data\minecraft\tags\item\trim_templates.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\item\swords.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\item\pickaxes.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\item\trim_templates.json
 af382c8800676e14f161cbe0fcc9f61d6cc66497 data\minecraft\tags\item\planks.json
-b32b2de2e8bad6546dceb4c341cc3d7275b20a16 data\minecraft\tags\item\axes.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\item\axes.json

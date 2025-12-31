@@ -6,9 +6,11 @@ import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
-import net.thatblueguy16.wilderworld.block.custom.GlowRootCrop;
+import net.thatblueguy16.wilderworld.block.custom.AncientBog.GlowRootCrop;
 import net.thatblueguy16.wilderworld.block.custom.LumenPodBlock;
 import net.thatblueguy16.wilderworld.item.ModItems;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -31,9 +33,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSingleton(ModBlocks.CYPRESS_LEAVES, TexturedModel.LEAVES);
 
-        blockStateModelGenerator.registerTintableCross(ModBlocks.CYPRESS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.BROMELIAD, BlockStateModelGenerator.TintType.NOT_TINTED);
-
         cypressPlanksPool.stairs(ModBlocks.CYPRESS_STAIR);
         cypressPlanksPool.slab(ModBlocks.CYPRESS_SLAB);
 
@@ -46,19 +45,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.CYPRESS_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.CYPRESS_TRAPDOOR);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TORMENTIUM_BLOCK);
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_TORMENTIUM_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_TORMENTIUM_ORE);
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TORMENTIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DRIED_PEAT_BLOCK);
         blockStateModelGenerator.registerTintableCross(ModBlocks.SPORECAP, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PEAT_BLOCK);
-        blockStateModelGenerator.registerCrop(ModBlocks.GLOWROOT, GlowRootCrop.AGE, 0,1,2,3);
+        blockStateModelGenerator.registerCrop(ModBlocks.GLOWROOT_CROP, GlowRootCrop.AGE, 0,1,2,3);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SPORECAP_BLOCK);
         Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.LUMENPOD_BLOCK, blockStateModelGenerator.modelCollector);
@@ -71,9 +64,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerLog(ModBlocks.FERRUSK_WOOD).wood(ModBlocks.FERRUSK_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.DEAD_FERRUSK_WOOD).wood(ModBlocks.DEAD_FERRUSK_WOOD);
-
-        blockStateModelGenerator.registerTintableCross(ModBlocks.FERRUSK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.DEAD_FERRUSK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FERRUSK_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEAD_FERRUSK_LEAVES);
@@ -108,6 +98,26 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(ModBlocks.CATTAILS, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(ModBlocks.TALL_CATTAILS, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        blockStateModelGenerator.registerTintableCross(ModBlocks.MILKWEED, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.MILKWEED_TEAL, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.MILKWEED_LAVENDER, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.MILKWEED_YELLOW, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.MILKWEED_BLUE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_FERRUSK_LOG).wood(ModBlocks.STRIPPED_FERRUSK_WOOD);
+
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_DEAD_FERRUSK_LOG).log(ModBlocks.STRIPPED_DEAD_FERRUSK_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_FERRUSK_LOG).log(ModBlocks.STRIPPED_FERRUSK_LOG);
+
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_DEAD_FERRUSK_LOG).log(ModBlocks.STRIPPED_DEAD_FERRUSK_LOG);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.BOG_MAW, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.BOG_BULB, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.WILD_GLOWROOT, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.CYPRESS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
 
     }
 
@@ -117,33 +127,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SAPPHIRE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.MISTCALL_LANTERN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.RAW_TORMENTIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRIED_PEAT_CLUMP, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.TORMENTIUM_INGOT, Models.GENERATED);
-
-        itemModelGenerator.register(ModItems.MASHED_GLOWROOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LAVENDER_DYE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PEAT_CLUMP, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.DRIED_PEAT_CLUMP, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
-
-        itemModelGenerator.register(ModItems.TORMENTIUM_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.TORMENTIUM_PICKAXE, Models.HANDHELD);
-
-        itemModelGenerator.register(ModItems.TORMENTIUM_AXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.TORMENTIUM_SHOVEL, Models.HANDHELD);
-
-        itemModelGenerator.register(ModItems.TORMENTIUM_HOE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.TORMENTIUM_HAMMER, Models.HANDHELD);
-
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TORMENTIUM_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TORMENTIUM_CHESTPLATE));
-
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TORMENTIUM_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TORMENTIUM_BOOTS));
-
-        itemModelGenerator.register(ModItems.SAPPHIRE_HORSE_ARMOR, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WORLD_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SCUTTLE_TAIL_SPAWN_EGG,
+               new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty() ));
+        itemModelGenerator.register(ModItems.BOG_MAW_SPAWN_EGG,
+               new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty() ));
 
 
 

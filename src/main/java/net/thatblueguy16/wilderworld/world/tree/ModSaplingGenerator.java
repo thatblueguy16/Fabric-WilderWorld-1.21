@@ -18,7 +18,7 @@ public abstract class ModSaplingGenerator {
             Optional.of(ModConfiguredFeatures.BIG_CYPRESS_KEY),
             Optional.empty(),
             Optional.of(ModConfiguredFeatures.CYPRESS_KEY),
-            Optional.of(ModConfiguredFeatures.CYPRESS_KEY2),
+            Optional.empty(),
             Optional.empty(),
             Optional.empty()
     );
@@ -33,25 +33,6 @@ public abstract class ModSaplingGenerator {
             Optional.empty()
             );
 
-    public static final  SaplingGenerator FERRUSK = new SaplingGenerator("ferrusk",
-            0.1F,
-            Optional.empty(),
-            Optional.empty(),
-            Optional.of(ModConfiguredFeatures.FERRUSK_KEY),
-            Optional.empty(),
-            Optional.empty(),
-            Optional.empty()
-            );
-
-    public static final  SaplingGenerator DEAD_FERRUSK = new SaplingGenerator("dead_ferrusk",
-            0.1F,
-            Optional.empty(),
-            Optional.empty(),
-            Optional.of(ModConfiguredFeatures.DEAD_FERRUSK_KEY),
-            Optional.of(ModConfiguredFeatures.DEAD_FERRUSK_KEY2),
-            Optional.empty(),
-            Optional.empty()
-            );
 
 
 

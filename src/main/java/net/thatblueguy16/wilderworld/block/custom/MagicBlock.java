@@ -36,7 +36,6 @@ public class MagicBlock extends Block {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEntity) {
             if(itemEntity.getStack().getItem() == ModItems.SAPPHIRE);{
-                itemEntity.setStack(new ItemStack(ModItems.RAW_TORMENTIUM, itemEntity.getStack().getCount()));
             }
         }
 

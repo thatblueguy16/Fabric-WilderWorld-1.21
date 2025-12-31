@@ -7,6 +7,10 @@
     "wilderworld:ferrusk_log",
     "wilderworld:ferrusk_wood",
     "wilderworld:dead_ferrusk_log",
-    "wilderworld:dead_ferrusk_wood"
+    "wilderworld:dead_ferrusk_wood",
+    "wilderworld:stripped_dead_ferrusk_log",
+    "wilderworld:stripped_ferrusk_log",
+    "wilderworld:stripped_dead_ferrusk_wood",
+    "wilderworld:stripped_ferrusk_wood"
   ]
 }

@@ -3,15 +3,20 @@ package net.thatblueguy16.wilderworld;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.thatblueguy16.wilderworld.block.ModBlocks;
 import net.thatblueguy16.wilderworld.component.ModDataComponentTypes;
+import net.thatblueguy16.wilderworld.entity.ModEntities;
+import net.thatblueguy16.wilderworld.entity.custom.BogMawEntity;
+import net.thatblueguy16.wilderworld.entity.custom.ScuttleTailEntity;
 import net.thatblueguy16.wilderworld.item.ModItemGroups;
 import net.thatblueguy16.wilderworld.item.ModItems;
-import net.thatblueguy16.wilderworld.util.HammerUsageEvent;
+import net.thatblueguy16.wilderworld.sound.ModSounds;
+import net.thatblueguy16.wilderworld.world.gen.ModEntitySpawns;
 import net.thatblueguy16.wilderworld.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +35,8 @@ public class WilderWorld implements ModInitializer {
 		ModDataComponentTypes.registerDataComponentTypes();
 		ModWorldGeneration.generateModWorldGen();
 
-		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
+		ModEntities.registerModEntities();
+
 
 		FuelRegistry.INSTANCE.add(ModBlocks.CYPRESS_BUTTON, 100);
 		FuelRegistry.INSTANCE.add(ModBlocks.CYPRESS_LOG, 300);
@@ -62,8 +68,10 @@ public class WilderWorld implements ModInitializer {
 		StrippableBlockRegistry.register(ModBlocks.CYPRESS_LOG, ModBlocks.STRIPPED_CYPRESS_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CYPRESS_WOOD, ModBlocks.STRIPPED_CYPRESS_WOOD);
 
-		StrippableBlockRegistry.register(ModBlocks.FERRUSK_LOG, ModBlocks.DEAD_FERRUSK_LOG);
-		StrippableBlockRegistry.register(ModBlocks.FERRUSK_WOOD, ModBlocks.DEAD_FERRUSK_WOOD);
+		StrippableBlockRegistry.register(ModBlocks.FERRUSK_LOG, ModBlocks.STRIPPED_FERRUSK_LOG);
+		StrippableBlockRegistry.register(ModBlocks.FERRUSK_WOOD, ModBlocks.STRIPPED_FERRUSK_WOOD);
+		StrippableBlockRegistry.register(ModBlocks.DEAD_FERRUSK_LOG, ModBlocks.STRIPPED_DEAD_FERRUSK_LOG);
+		StrippableBlockRegistry.register(ModBlocks.DEAD_FERRUSK_WOOD, ModBlocks.STRIPPED_DEAD_FERRUSK_WOOD);
 
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CYPRESS_LOG, 5,5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_CYPRESS_LOG, 5,5);
@@ -89,16 +97,26 @@ public class WilderWorld implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DEAD_FERRUSK_WOOD, 5,5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DEAD_FERRUSK_LOG, 5,5);
 
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_FERRUSK_LOG, 5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_FERRUSK_WOOD, 5,5);
 
-		CompostingChanceRegistry.INSTANCE.add(ModItems.GLOWROOT_BULB, 0.25f);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_DEAD_FERRUSK_LOG, 5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_DEAD_FERRUSK_WOOD, 5,5);
+
+
+		CompostingChanceRegistry.INSTANCE.add(ModItems.GLOWROOT, 0.25f);
 		CompostingChanceRegistry.INSTANCE.add(ModBlocks.CYPRESS_LEAVES, 0.25f);
 
-		CompostingChanceRegistry.INSTANCE.add(ModBlocks.BROMELIAD, 0.25f);
 		CompostingChanceRegistry.INSTANCE.add(ModBlocks.SPORECAP, 0.25f);
+		CompostingChanceRegistry.INSTANCE.add(ModBlocks.BOG_MAW, 0.25f);
 
 		ModWorldGeneration.generateModWorldGen();
+		ModEntitySpawns.addSpawns();
 
+		ModSounds.registerSounds();
 
+		FabricDefaultAttributeRegistry.register(ModEntities.ScuttleTail, ScuttleTailEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.BogMaw, BogMawEntity.createAttributes());
 
 	}
 }

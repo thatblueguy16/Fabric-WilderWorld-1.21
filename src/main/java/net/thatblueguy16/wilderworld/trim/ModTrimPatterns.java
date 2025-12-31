@@ -17,7 +17,7 @@ public class ModTrimPatterns {
             Identifier.of(WilderWorld.MOD_ID, "world"));
 
     public static void bootstrap(Registerable<ArmorTrimPattern> context) {
-        register(context, ModItems.WORLD_SMITHING_TEMPLATE, WORLD);
+
     }
 
     private static void register(Registerable<ArmorTrimPattern> context, Item item, RegistryKey<ArmorTrimPattern> key) {

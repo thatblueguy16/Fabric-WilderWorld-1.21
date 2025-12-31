@@ -13,7 +13,7 @@ import net.thatblueguy16.wilderworld.util.ModTags;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    TORMENTIUM(ModTags.Blocks.INCORRECT_FOR_TORMENTIUM_TOOL, 1307, 9.0F, 4.0F, 15, () -> Ingredient.ofItems(ModItems.TORMENTIUM_INGOT));
+    ;
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

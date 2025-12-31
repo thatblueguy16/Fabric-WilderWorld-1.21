@@ -6,32 +6,16 @@
   "item.wilderworld.raw_tormentium": "Raw Tormentium",
 
   "item.wilderworld.tormentium_ingot": "Tormentium Ingot",
-  "item.wilderworld.glowroot_bulb": "Glowroot Bulb",
+  "item.wilderworld.glowroot": "Glowroot",
 
   "item.wilderworld.mashed_glowroot": "Mashed Glowroot",
   "item.wilderworld.peat_clump": "Peat Clump",
 
   "item.wilderworld.dried_peat_clump": "Dried Peat Clump",
-  "item.wilderworld.chisel": "Chisel",
+  "item.wilderworld.lavender_dye": "Lavender Dye",
 
-  "item.wilderworld.tormentium_sword": "Tormentium Sword",
-  "item.wilderworld.tormentium_pickaxe": "Tormentium Pickaxe",
-
-  "item.wilderworld.tormentium_axe": "Tormentium Axe",
-  "item.wilderworld.tormentium_shovel": "Tormentium Shovel",
-
-  "item.wilderworld.tormentium_hoe": "Tormentium Hoe",
-  "item.wilderworld.tormentium_hammer": "Tormentium Hammer",
-
-  "item.wilderworld.tormentium_helmet": "Tormentium Helmet",
-  "item.wilderworld.tormentium_chestplate": "Tormentium Chestplate",
-
-  "item.wilderworld.tormentium_leggings": "Tormentium Leggings",
-  "item.wilderworld.tormentium_boots": "Tormentium Boots",
-
-  "item.wilderworld.sapphire_horse_armor": "Sapphire Horse Armor",
-  "item.wilderworld.world_smithing_template": "World Smithing Template",
-
+  "item.wilderworld.scuttle_tail_spawn_egg": "Scuttle Tail Spawn Egg",
+  "item.wilderworld.bog_maw_spawn_egg": "Bog Maw Spawn Egg",
 
 
   "block.wilderworld.cypress_wood": "Cypress Wood",
@@ -121,25 +105,40 @@
   "block.wilderworld.cattails": "Cattails",
   "block.wilderworld.tall_cattails": "Tall Cattails",
 
+  "block.wilderworld.milkweed": "Pink Milkweed",
+  "block.wilderworld.milkweed_teal": "Teal Milkweed",
+
+  "block.wilderworld.milkweed_lavender": "Lavender Milkweed",
+  "block.wilderworld.milkweed_yellow": "Yellow Milkweed",
+
+  "block.wilderworld.milkweed_blue": "Blue Milkweed",
+  "block.wilderworld.stripped_ferrusk_log": "Stripped Ferrusk Log",
+
+  "block.wilderworld.stripped_ferrusk_wood": "Stripped Ferrusk Wood",
+  "block.wilderworld.stripped_dead_ferrusk_log": "Stripped Dead Ferrusk Log",
+
+  "block.wilderworld.stripped_dead_ferrusk_wood": "Stripped Dead Ferrusk Wood",
+  "block.wilderworld.bog_maw": "Bog Maw",
+
+  "block.wilderworld.bog_bulb": "Bog Bulb",
+  "block.wilderworld.wild_glowroot": "Wild Glowroot",
 
 
-  "itemgroup.wilderworld.misty_mire": "Misty Mire",
+
+  "itemgroup.wilderworld.ancient_bog": "Ancient Bog",
   "itemgroup.wilderworld.rusty_steppe": "Rusty Steppe",
 
 
 
   "tooltip.wilderworld.magic_block.tooltip0": "This block has §9MAGICAL properties§r",
-  "tooltip.wilderworld.mistcall_lantern.shift_down": "This item §9highlights§r Mobs upon Right Click",
-
-  "tooltip.wilderworld.mistcall_lantern": "Press §eShift§r for more information",
   "tooltip.wilderworld.glowroot_bulb.tooltip": "This has a special property",
 
   "tooltip.wilderworld.mashed_glowroot.tooltip": "Mashing it seems to have lengthened the effect",
   "tooltip.wilderworld.dried_peat_clump.tooltip": "This isn't very good is it?",
 
-  "tooltip.wilderworld.chisel.shift_down": "Press Shift for more info",
-  "tooltip.wilderworld.chisel": "This Item can change certain Blocks",
-
   "trim_material.wilderworld.sapphire": "Sapphire Material",
-  "trim_patter.wilderworld.world": "World Armor Pattern"
+  "trim_patter.wilderworld.world": "World Armor Pattern",
+
+  "entity.wilderworld.scuttle_tail": "Scuttle Tail",
+  "entity.wilderworld.bog_maw": "Bog Maw"
 }
